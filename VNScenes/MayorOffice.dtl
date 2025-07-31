@@ -1,0 +1,24 @@
+B\: Hey there sport! Heard your brother died, what a shame.
+set {talked_to_mayor} = true
+- J: Yeah. Sucks.
+	B\: Eh, I never liked him anyway. I got some paperwork to do now, so I'll be seeing you!
+- J: Did you kill him?
+	B\:...
+	Kid, do you know why I was elected?
+	It's because I advertised myself as spineless.
+	People assumed that meant they could push me around, get me to do what they wanted.
+	Truth is, I'm stubborn as hell. My species just lacks a spine.
+	I'm not a good person, Jiminy. I'm in it half for the money, half for the taste of the babies I kiss.
+	That's part of what your brother was investigating. My dealings with the mob.
+	I have no idea what they do behind my back, I just cover it up.
+	Depending on what came out, I could go to space jail, eating nothing but space food and living in a space cell.
+	One that would not be very spacious.
+	I planned to kill him last night, but then a boatload of paperwork was dropped on my desk. I was working on it the whole night.
+	I'm still working on it. Look at the dates, they're all from last night and today.
+	J\: I can still smell the marker fumes. Seems legit.
+	B\: Want my advice? I haven't seen the Martian Mafia in days. They're up to something.
+	Here, there's are a bunch of tubes of paint in the drawer in the room over.
+	set {inventory.paint} = true
+	On his honor, he has to give info to anyone who gives him one.
+	J\: Why are you telling me all this? You might not go to jail if this gets out but you'd have no hope of a second term.
+	B\: I really hate my job.

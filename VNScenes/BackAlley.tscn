@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhcx3g5jchvor"]
+
+[ext_resource type="PackedScene" uid="uid://6im18cj58ipj" path="res://BaseScene.tscn" id="1_exlon"]
+
+[node name="BackAlley" instance=ExtResource("1_exlon")]

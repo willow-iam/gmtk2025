@@ -1,0 +1,39 @@
+V\: What do you want, kid? You're blocking my view
+- J: Sorry to bother you
+	V\: You should be. Now leave me alone, your presence is sapping my talent.
+if {inventory.paint} == true:
+	- J: Want some paint?
+		V\: Wait, what? Let's see here...
+		Ambitious Amber. Beautiful color. You're in luck, I just ran out of what I had.
+		Well, you know the deal. What do you wanna know?
+		J\: My brother's dead.
+		V\: So Jeremiah finally bit it, eh?
+		Figured it'd happen sooner or later. Always-
+		J\: What do you know about it?
+		V\: Jeez, have some patience why don't ya?
+		I may not know anything about it, but the police probably do.
+		J\: They ruled it a suicide.
+		V\: Knowing them, they don't actually believe that.
+		We've got a word for people like them back on Mars.
+		...
+		Anyway, if you wanna see what they've got, they leave the key to their back office in the bushes they got outside their door.
+		Anyway, thanks for the paint, kid. Be seein' ya.
+- J: Did you kill my brother?
+	V\: So Jeremiah finally bit it, eh?
+	Figured it'd happen sooner or later. Always stickin' his nose where it didn't belong.
+	But no, I didn't kill him. I assume it happened last night, yeah?
+	We got back this morning from a week long trip to Rigel 7.
+	- J: I don't believe you.
+		V\: Well that's your choice. Now if you'll excuse me, I have a masterpiece to finish.
+	- J: Alright, sounds plausible.
+		V\: Cool. Now leave me alone.
+	if {inventory.bizcard} == true:
+		- J: What about this business card I found in his Jacket?
+			V\: That's one of ours alright. Couldn't tell ya how he got it.
+			Must have been a sloppy job if the corpse was still there.
+			If I'd done it, you'd never have seen him again.
+			I'll tell you though, if I had to point fingers it would be at that geezer who lives next to you.
+			J\: You mean my granny?
+			V\: Yeah, that one. Higher body count than me. Plus, I thought I saw something weird under the rug there once.
+			Now listen, I don't have any more time to spare. I'm gonna be selling this thing in the Centauri system soon and my shuttle leaves at 12.
+			So beat it.

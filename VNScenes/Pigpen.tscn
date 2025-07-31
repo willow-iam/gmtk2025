@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://ciceymte4mi15"]
+
+[ext_resource type="PackedScene" uid="uid://6im18cj58ipj" path="res://BaseScene.tscn" id="1_b6p6y"]
+
+[node name="Pigpen" instance=ExtResource("1_b6p6y")]
