@@ -391,7 +391,7 @@ func _on_resources_tree_item_clicked(_pos: Vector2, mouse_button_index: int) -> 
 
 
 func _on_resources_tree_item_collapsed(item:TreeItem) -> void:
-	var collapsed_info := DialogicUtil.get_editor_setting("resource_list_collapsed_info", [])
+	var collapsed_info: Array = DialogicUtil.get_editor_setting("resource_list_collapsed_info", [])
 	if item.get_text(0) in collapsed_info:
 		if not item.collapsed:
 			collapsed_info.erase(item.get_text(0))
@@ -433,7 +433,7 @@ func _on_right_click_menu_id_pressed(id: int) -> void:
 			)
 		4:  # COPY IDENTIFIER
 			DisplayServer.clipboard_set(
-				DialogicResourceUtil.get_unique_identifier(
+				DialogicResourceUtil.get_unique_identifier_by_path(
 					%RightClickMenu.get_meta("item_clicked").get_metadata(0)
 				)
 			)
