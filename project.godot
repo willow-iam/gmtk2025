@@ -46,6 +46,7 @@ directories/dtl_directory={
 "Pigpen": "res://VNScenes/Pigpen.dtl",
 "Rug": "res://VNScenes/Rug.dtl",
 "UseCuffs": "res://VNScenes/UseCuffs.dtl",
+"Winventory": "res://Winventory.dtl",
 "WorldMap": "res://VNScenes/WorldMap.dtl"
 }
 extensions_folder="res://addons/dialogic_additions"

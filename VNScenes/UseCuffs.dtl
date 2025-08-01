@@ -20,6 +20,7 @@ Cuff whom?
 	I... uh... Well, you have a lot of guns!
 	I don't own a single pistol. If I shot Jeremiah I would have blown his head off!
 	Well... jeez, I didn't think this through.
+	[signal arg="reset"]
 - Vincent Van Mafia
 	You'd better not be trying to cuff me.
 	You're under arrest for the murder of my brother.
@@ -40,6 +41,7 @@ Cuff whom?
 			jump qMafia
 	Uuuuhhhhh...
 	Kid, you just made yourself a powerful enemy.
+	[signal arg="reset"]
 - The Police Chief
 	G: Hey, what's going on?
 	J: You're under arrest for the murder of my brother.
@@ -114,6 +116,7 @@ Cuff whom?
 	J: Well you see... uh...
 	Come to think of it I actually don't know
 	B: Hey, it's alright, we all make mistakes. Just give me your firstborn child and we'll be even, alright?
+	[signal arg="reset"]
 
 if false:
 	label End
@@ -131,3 +134,4 @@ if false:
 	label Close
 	G: See? You can't Prove a thing.
 	[Scene omitted to comply with the GMTK Game Jam's content policy]
+	[signal arg="reset"]
