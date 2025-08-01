@@ -3,7 +3,9 @@ var children = Dictionary()
 func _ready():
 	for child in get_children():
 		children[child.name]=child
-func _process(delta: float) -> void:
+	print(len(get_children()))
+
+func _process(_delta: float) -> void:
 	children["ChiefStation"]
 	if GameClock.time > GameClock.EveryoneLeaves:
 		children["MafiaStation"].show()

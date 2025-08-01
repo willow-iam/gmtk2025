@@ -1,6 +1,6 @@
 extends Dialogic_Button
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Dialogic.VAR.get_variable("inventory.handcuffs"):
 		show()
 	else:
