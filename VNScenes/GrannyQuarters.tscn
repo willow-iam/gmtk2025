@@ -1,5 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://hjvvjmpr2ik3"]
+[gd_scene load_steps=4 format=3 uid="uid://hjvvjmpr2ik3"]
 
 [ext_resource type="PackedScene" uid="uid://6im18cj58ipj" path="res://BaseScene.tscn" id="1_cshoq"]
+[ext_resource type="Texture2D" uid="uid://dvm2u43lke7ro" path="res://characters/ph_granny.jpg" id="2_qhuk7"]
+[ext_resource type="Script" uid="uid://brqc6a7qkvqph" path="res://dialogic_button.gd" id="3_tpimu"]
 
 [node name="GrannyQuarters" instance=ExtResource("1_cshoq")]
+
+[node name="Granny" type="Button" parent="." index="1"]
+offset_left = 27.0
+offset_top = 34.0
+offset_right = 553.0
+offset_bottom = 544.0
+icon = ExtResource("2_qhuk7")
+script = ExtResource("3_tpimu")
+metadata/_custom_type_script = "uid://brqc6a7qkvqph"
+
+[node name="GrannyDrawer" type="Button" parent="." index="2"]
+offset_left = 773.0
+offset_top = 77.0
+offset_right = 964.0
+offset_bottom = 108.0
+text = "Inspect Granny's Drawer"
+script = ExtResource("3_tpimu")
+metadata/_custom_type_script = "uid://brqc6a7qkvqph"
+
+[node name="Rug" type="Button" parent="." index="3"]
+offset_left = 866.0
+offset_top = 333.0
+offset_right = 904.0
+offset_bottom = 364.0
+text = "Look under the rug"
+script = ExtResource("3_tpimu")
+metadata/_custom_type_script = "uid://brqc6a7qkvqph"

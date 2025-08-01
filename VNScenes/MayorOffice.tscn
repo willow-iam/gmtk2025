@@ -1,5 +1,41 @@
-[gd_scene load_steps=2 format=3 uid="uid://wmabc5bu64pr"]
+[gd_scene load_steps=6 format=3 uid="uid://wmabc5bu64pr"]
 
-[ext_resource type="PackedScene" uid="uid://6im18cj58ipj" path="res://BaseScene.tscn" id="1_5ojcj"]
+[ext_resource type="Script" uid="uid://1tuktt4ypr7q" path="res://WorldButton.gd" id="1_iom5y"]
+[ext_resource type="Script" uid="uid://dl14cyefk4sp" path="res://dialogic_scene.gd" id="1_vjr0o"]
+[ext_resource type="Texture2D" uid="uid://bx0egb8x5rxre" path="res://characters/ph_mayor.jpg" id="2_vjr0o"]
+[ext_resource type="Script" uid="uid://brqc6a7qkvqph" path="res://dialogic_button.gd" id="3_pcyg4"]
+[ext_resource type="Texture2D" uid="uid://c2uuydcnm25ug" path="res://characters/ph_cabinet.jpeg" id="4_ua4g2"]
 
-[node name="MayorOffice" instance=ExtResource("1_5ojcj")]
+[node name="MayorOffice" type="Node2D"]
+script = ExtResource("1_vjr0o")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 120.0
+offset_bottom = 31.0
+text = "Return to map"
+script = ExtResource("1_iom5y")
+
+[node name="Mayor" type="Button" parent="."]
+offset_left = 6.0
+offset_top = 77.0
+offset_right = 529.0
+offset_bottom = 518.0
+icon = ExtResource("2_vjr0o")
+script = ExtResource("3_pcyg4")
+leaves = true
+
+[node name="Cabinet" type="Button" parent="."]
+offset_left = 819.0
+offset_top = 130.0
+offset_right = 997.0
+offset_bottom = 516.0
+icon = ExtResource("4_ua4g2")
+script = ExtResource("3_pcyg4")
+
+[node name="MayorBasement" type="Button" parent="."]
+offset_left = 1.0
+offset_top = 607.0
+offset_right = 87.0
+offset_bottom = 638.0
+text = "Basement"
+script = ExtResource("3_pcyg4")

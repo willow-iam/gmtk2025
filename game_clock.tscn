@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqseh0du8t61r"]
+
+[ext_resource type="Script" uid="uid://eeb7sfhhcmi" path="res://GameClock.gd" id="1_fnpis"]
+
+[node name="GameClock" type="Label"]
+offset_left = 1069.0
+offset_top = 623.0
+offset_right = 1149.0
+offset_bottom = 646.0
+text = "0:00"
+horizontal_alignment = 2
+script = ExtResource("1_fnpis")
+
+[node name="Timer" type="Timer" parent="."]

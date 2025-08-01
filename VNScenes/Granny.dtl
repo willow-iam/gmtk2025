@@ -1,0 +1,33 @@
+if {spoken.Granny} == true:
+	O\: I'd like to say it's been nice seeing you.
+	...
+else:
+	O\: Jimpin, my beautiful grandchild!
+	Come to hear more stories about my various murders?
+	- J: Lay it on me murder granny
+		O\: Well too bad! My guns need-a polishin'.
+	- J: What's with the numbers under the rug? | [if {spoken.Rug} == true]
+		O\: Oh yes, Jeremiah put it there!
+		For some reason he trusted me with it. Never told me what it was for, though.
+		He said to tell the person who found it "I have the time, but my train is at fifty-nine."
+		Hell if I know what it means.
+	- J: Possibly one in particular.
+		O\: You aren't insinuating that I killed dear Jeremiah, are you?
+		J\: That is exactly what I'm doing.
+		O\: Careful now, go pokin' your head around and you might find something you might not like.
+		J\: I know you used to be a serial killer, what else about you could upset me?
+		O\: Ah, fair point. Well anyway, I loved dear Jeremiah.
+		What possible reason could I possibly have to kill him?
+		- J: Nothing I can think of
+			O\: That's what I thought...
+		- J: The will? | [if {inventory.will} == true]
+			O\: What? Oh, right, that old thing.
+			Bah, I never cared for it. More insulting than that puny pistol he gave me for my birthday.
+			And that's exactly what it was, an insult. I'm 60 years older than him and HE thought he'd die first? I think not!
+			J\: He did die first.
+			O\: Well that certainly does complicate matters, doesn't it...
+			Some grandson. Let him keep his filthy rounded money.
+			J\: He's dead, grandpa.
+			O\: And we're all the better for it.
+			If you wanna get to the bottom of the murder, though, I'd investigate the mayor.
+			I never liked him, anyway. Four less years!

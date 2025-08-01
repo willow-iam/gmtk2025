@@ -1,0 +1,6 @@
+[text_input text="Locked with a 4 digit code." var="Answer"]
+if {Answer} == "9040":
+	It looks like some kind of invitation and a pair of handcuffs. I'll take them.
+	set {inventory.handcuffs} = true
+else:
+	Nope, that's not it.

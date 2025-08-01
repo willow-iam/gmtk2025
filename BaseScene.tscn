@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://6im18cj58ipj"]
 
-[ext_resource type="Script" uid="uid://dl14cyefk4sp" path="res://base_dialogic.gd" id="1_8gjwr"]
+[ext_resource type="Script" uid="uid://dl14cyefk4sp" path="res://dialogic_scene.gd" id="1_8gjwr"]
 [ext_resource type="Script" uid="uid://1tuktt4ypr7q" path="res://WorldButton.gd" id="2_qe2rp"]
 
 [node name="BaseScene" type="Node2D"]

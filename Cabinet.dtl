@@ -1,0 +1,3 @@
+if {inventory.paint} == false:
+	There's a tube of paint in here. "Ambitious Amber." This could be useful later.
+	set {inventory.paint} = true

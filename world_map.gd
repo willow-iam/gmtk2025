@@ -6,7 +6,8 @@ const place_name_to_scene_name = {
 	"My Quarters" : "MyQuarters",
 	"The Shuttlebay" : "Shuttlebay",
 	"The Mayor's Office" : "MayorOffice",
-	"The Back Alley near the Mayor's office" : "BackAlley"
+	"The Back Alley near the Mayor's office" : "BackAlley",
+	"My Inventory" : "Inventory"
 }
 
 func _choice_received(info):

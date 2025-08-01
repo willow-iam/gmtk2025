@@ -1,5 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://ciceymte4mi15"]
+[gd_scene load_steps=5 format=3 uid="uid://x5hn2dymbr3q"]
 
 [ext_resource type="PackedScene" uid="uid://6im18cj58ipj" path="res://BaseScene.tscn" id="1_b6p6y"]
+[ext_resource type="Texture2D" uid="uid://cwy8670vit2ks" path="res://characters/ph_chief.jpg" id="2_fld28"]
+[ext_resource type="Script" uid="uid://ckl5pannksqcx" path="res://VNScenes/ChiefInOffice.gd" id="3_xro5y"]
+[ext_resource type="Script" uid="uid://5milrdxhg5cv" path="res://VNScenes/PigDoor.gd" id="4_4ey7h"]
 
 [node name="Pigpen" instance=ExtResource("1_b6p6y")]
+
+[node name="ChiefOffice" type="Button" parent="." index="1"]
+offset_left = 18.0
+offset_top = 121.0
+offset_right = 666.0
+offset_bottom = 556.0
+icon = ExtResource("2_fld28")
+script = ExtResource("3_xro5y")
+
+[node name="Desk" type="Button" parent="." index="2"]
+offset_left = 842.0
+offset_top = 269.0
+offset_right = 1096.0
+offset_bottom = 300.0
+text = "Inspect the Chief's Desk"
+script = ExtResource("4_4ey7h")

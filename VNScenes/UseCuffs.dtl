@@ -1,0 +1,133 @@
+Cuff whom?
+- Granny
+	Hey, what the hell are you doing?
+	You're under arrest for the murder of my brother.
+	label qGranny
+	I told you already, I didn't do it! What evidence do you have?
+	if {journal_unlocked} or {inventory.painting} or {inventory.handcuffs}:
+		- Present Journal | [if {journal_unlocked} == true]
+			Why in the world would you think "office" refers to my quarters?
+			set {journal_unlocked} = false
+			jump qGranny
+		- Present Painting | [if {inventory.painting} == true]
+			What the hell is this?
+			set {inventory.painting} = false
+			jump qGranny
+		- Present Invitation | [if {inventory.handcuffs} == true]
+			What the hell is this?
+			set {inventory.handcuffs} = false
+			jump qGranny
+	I... uh... Well, you have a lot of guns!
+	I don't own a single pistol. If I shot Jeremiah I would have blown his head off!
+	Well... jeez, I didn't think this through.
+- Vincent Van Mafia
+	You'd better not be trying to cuff me.
+	You're under arrest for the murder of my brother.
+	label qMafia
+	You better have some damn good evidence.
+	if {journal_unlocked} or {inventory.painting} or {inventory.handcuffs}:
+		- Present Journal | [if {journal_unlocked} == true]
+			What office? We're not idiots, we decentralized a long time ago.
+			set {journal_unlocked} = false
+			jump qMafia
+		- Present Painting | [if {inventory.painting} == true]
+			Yes, I painted that. Your point being?
+			set {inventory.painting} = false
+			jump qMafia
+		- Present Invitation | [if {inventory.handcuffs} == true]
+			Yes, that's where we came back from this morning.
+			set {inventory.handcuffs} = false
+			jump qMafia
+	Uuuuhhhhh...
+	Kid, you just made yourself a powerful enemy.
+- The Police Chief
+	G: Hey, what's going on?
+	J: You're under arrest for the murder of my brother.
+	G: That's ridiculous, I'm a cop! What evidence do you even have?
+	if {journal_unlocked} or {inventory.painting} or {inventory.handcuffs}:
+		- Present Journal | [if {journal_unlocked} == true]
+			label qJournal
+			set {presented_count} += 1
+			G: What makes you think that was my office?
+			J: The busted up door.
+			Jeremiah was looking into your shady dealings with the mafia and got caught.
+			He busted up the back door trying to escape you.
+			if {presented_count}<3:			
+				G: If you think the Mafia is involved, why not accuse them?
+				if {inventory.handcuffs}:
+					jump qInvitation
+				else:
+					jump Close
+			else:
+				jump End
+		- Present Painting | [if {inventory.painting} == true]
+			label qPainting
+			set {presented_count} += 1
+			G: That was in the mayor's basement, you idiot.
+			J: True, but why did you have that code in your desk?
+			G: It could have been placed there to frame me! 
+			J: These were given to you by the mafia as bribes, weren't they?
+			Killing Jeremiah while he was investigating you would have made you seem guilty, so you had to be extra careful to hide your dealings with the mob.c
+			if {presented_count}<3:
+				G: What makes you think he was investigating me?
+				if {journal_unlocked}:
+					jump qJournal
+				else:
+					jump Close
+			else:
+				jump End
+		- Present Invitation | [if {inventory.handcuffs} == true]
+			label qInvitation
+			set {presented_count} += 1
+			G: What the hell is this?
+			J: An invitation to the mafia's getaway on Rigel 7, addressed to my brother.
+			They WERE planning on killing him there hide any evidence, but he knew what they were doing and never showed up.
+			J: You're the only one in this web of lies who has no clear alibi. 
+			if {presented_count}<3:
+				G: What web of lies? What are you talking about?
+				if {inventory.painting}:
+					jump qPainting
+				else:
+					jump Close
+			else:
+				jump End
+- The Mayor
+	B: Oh no, the feds! I-
+	Oh wait, it's you.
+	J: You're under arrest for the murder of my brother
+	label qMayor
+	B: Would you mind presenting some evidence to back that up?
+	if {journal_unlocked} or {inventory.painting} or {inventory.handcuffs}:
+		- Present Journal | [if {journal_unlocked} == true]
+			B: You think that's the mayor's office? Why?
+			set {journal_unlocked} = false
+			jump qMayor
+		- Present Painting | [if {inventory.painting} == true]
+			B: You found that in my basement?
+			Also, I have a basement?
+			set {inventory.painting} = false
+			jump qMayor
+		- Present Invitation | [if {inventory.handcuffs} == true]
+			B: How does this have anything to do with me?
+			set {inventory.handcuffs} = false
+			jump qMayor
+	J: Well you see... uh...
+	Come to think of it I actually don't know
+	B: Hey, it's alright, we all make mistakes. Just give me your firstborn child and we'll be even, alright?
+
+if false:
+	label End
+	J: The mayor was doing paperwork, and my Grandfather doesn't own any gun that could make that kind of wound.
+	You are the only person who could have done this.
+	G: Big deal. Cops dealing with the mafia, cops killing people, cops have been doing those things since the beginning of time.
+	Just give me that slap on the wrist and let me get on with my life.
+	J: Captain, would you mind making a pit stop at the local courthouse?
+	C: Not at all!
+	(Everyone gets on the space train.)
+	Credits\:
+	Visual art, Writing, Story design: Emily Uffelman
+	Programming, Edititng: Will Howard
+if false:
+	label Close
+	G: See? You can't Prove a thing.
+	[Scene omitted to comply with the GMTK Game Jam's content policy]

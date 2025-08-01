@@ -11,22 +11,41 @@ config_version=5
 [application]
 
 config/name="gmtk2025"
-run/main_scene="uid://bv5xsg0iypkva"
+run/main_scene="uid://d1wlwgd1rliaf"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+GameClock="*res://game_clock.tscn"
 
 [dialogic]
 
 directories/dch_directory={}
 directories/dtl_directory={
 "BackAlley": "res://VNScenes/BackAlley.dtl",
-"GrannyQuarters": "res://VNScenes/GrannyQuarters.dtl",
+"Backpack": "res://VNScenes/Backpack.dtl",
+"Cabinet": "res://Cabinet.dtl",
+"ChiefOffice": "res://VNScenes/ChiefOffice.dtl",
+"ChiefSaysNo": "res://VNScenes/ChiefSaysNo.dtl",
+"ChiefStation": "res://VNScenes/ChiefStation.dtl",
+"ClosedDesk": "res://VNScenes/ClosedDesk.dtl",
+"EarlyClock": "res://VNScenes/EarlyClock.dtl",
+"Granny": "res://VNScenes/Granny.dtl",
+"GrannyDrawer": "res://VNScenes/GrannyDrawer.dtl",
+"GrannyStation": "res://VNScenes/GrannyStation.dtl",
 "Intro": "res://VNScenes/Intro.dtl",
-"MayorOffice": "res://VNScenes/MayorOffice.dtl",
+"MafiaStation": "res://VNScenes/MafiaStation.dtl",
+"Mayor": "res://VNScenes/Mayor.dtl",
+"MayorBasement": "res://VNScenes/MayorBasement.dtl",
+"MayorStation": "res://VNScenes/MayorStation.dtl",
+"MyQuarters": "res://VNScenes/MyQuarters.dtl",
+"OpenClock": "res://VNScenes/OpenClock.dtl",
+"OpenDesk": "res://VNScenes/OpenDesk.dtl",
+"Pigpen": "res://VNScenes/Pigpen.dtl",
+"Rug": "res://VNScenes/Rug.dtl",
+"UseCuffs": "res://VNScenes/UseCuffs.dtl",
 "WorldMap": "res://VNScenes/WorldMap.dtl"
 }
 extensions_folder="res://addons/dialogic_additions"
@@ -50,13 +69,44 @@ animations/leave_default_wait=true
 animations/cross_fade_default_length=0.5
 text/autopauses={}
 variables={
-"granny_paper_talk": false,
+"Answer": "",
 "inventory": {
 "bizcard": false,
-"paint": false
+"handcuffs": false,
+"journal": false,
+"key": false,
+"paint": false,
+"painting": false,
+"will": false
 },
-"talked_to_mayor": false
+"journal_unlocked": false,
+"presented_count": 0,
+"rug_check": false,
+"spoken": {
+"Granny": false,
+"Mafia": false,
+"Mayor": false,
+"Rug": false
 }
+}
+layout/style_directory={}
+audio/channel_defaults={
+"": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
+layout/style_list=[]
+layout/default_style="Default"
+glossary/default_case_sensitive=true
 
 [editor]
 

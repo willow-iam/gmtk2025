@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://cax7v0ly1lriv"]
+
+[ext_resource type="PackedScene" uid="uid://6im18cj58ipj" path="res://BaseScene.tscn" id="1_wrqc1"]
+[ext_resource type="Script" uid="uid://dsncm8gry7tfr" path="res://VNScenes/shuttlebay.gd" id="2_hjdtc"]
+[ext_resource type="Texture2D" uid="uid://cwy8670vit2ks" path="res://characters/ph_chief.jpg" id="2_ifk83"]
+[ext_resource type="Script" uid="uid://brqc6a7qkvqph" path="res://dialogic_button.gd" id="3_css7h"]
+[ext_resource type="Texture2D" uid="uid://dvm2u43lke7ro" path="res://characters/ph_granny.jpg" id="4_hjdtc"]
+[ext_resource type="Script" uid="uid://6ev2csur36p1" path="res://VNScenes/clock.gd" id="5_bt5b7"]
+[ext_resource type="Script" uid="uid://btfcyvohq12s2" path="res://VNScenes/use_cuffs.gd" id="6_css7h"]
+
+[node name="Shuttlebay" instance=ExtResource("1_wrqc1")]
+script = ExtResource("2_hjdtc")
+
+[node name="ChiefStation" type="Button" parent="." index="1"]
+offset_left = 36.0
+offset_top = 316.0
+offset_right = 684.0
+offset_bottom = 751.0
+scale = Vector2(0.37, 0.37)
+icon = ExtResource("2_ifk83")
+script = ExtResource("3_css7h")
+metadata/_custom_type_script = "uid://brqc6a7qkvqph"
+
+[node name="MafiaStation" type="Button" parent="." index="2"]
+offset_left = 768.0
+offset_top = 395.0
+offset_right = 1092.0
+offset_bottom = 426.0
+text = "The mob boss who hides behind an easel"
+script = ExtResource("3_css7h")
+metadata/_custom_type_script = "uid://brqc6a7qkvqph"
+
+[node name="GrannyStation" type="Button" parent="." index="3"]
+offset_left = 316.0
+offset_top = 276.0
+offset_right = 842.0
+offset_bottom = 786.0
+scale = Vector2(0.52, 0.52)
+icon = ExtResource("4_hjdtc")
+script = ExtResource("3_css7h")
+metadata/_custom_type_script = "uid://brqc6a7qkvqph"
+
+[node name="Clock" type="Button" parent="." index="4"]
+offset_left = 805.0
+offset_top = 189.0
+offset_right = 855.0
+offset_bottom = 220.0
+text = "Clock
+"
+script = ExtResource("5_bt5b7")
+metadata/_custom_type_script = "uid://brqc6a7qkvqph"
+
+[node name="UseCuffs" type="Button" parent="." index="5"]
+offset_left = 1049.0
+offset_top = 607.0
+offset_right = 1136.0
+offset_bottom = 638.0
+text = "Use Handcuffs"
+script = ExtResource("6_css7h")
+metadata/_custom_type_script = "uid://brqc6a7qkvqph"

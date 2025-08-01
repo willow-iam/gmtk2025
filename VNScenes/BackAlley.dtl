@@ -1,9 +1,17 @@
-V\: What do you want, kid? You're blocking my view
-- J: Sorry to bother you
-	V\: You should be. Now leave me alone, your presence is sapping my talent.
-if {inventory.paint} == true:
-	- J: Want some paint?
+if {spoken.Mayor} == true:
+	V\: Don't think I didn't hear you in there.
+	I don't know what you told him, but I keep my dealings with him very confidential.
+	I can't be associating with anyone who talks to him.
+elif {spoken.Mafia} == true:
+	V\: I don't have time, Kid. Leave me alone.
+else:
+	V\: What do you want, kid? You're blocking my view
+	
+	- J: Want some paint? | [if {inventory.paint}]
+		<Empty Text Event>
+		<Empty Text Event>
 		V\: Wait, what? Let's see here...
+		<Empty Text Event>
 		Ambitious Amber. Beautiful color. You're in luck, I just ran out of what I had.
 		Well, you know the deal. What do you wanna know?
 		J\: My brother's dead.
@@ -18,17 +26,19 @@ if {inventory.paint} == true:
 		...
 		Anyway, if you wanna see what they've got, they leave the key to their back office in the bushes they got outside their door.
 		Anyway, thanks for the paint, kid. Be seein' ya.
-- J: Did you kill my brother?
-	V\: So Jeremiah finally bit it, eh?
-	Figured it'd happen sooner or later. Always stickin' his nose where it didn't belong.
-	But no, I didn't kill him. I assume it happened last night, yeah?
-	We got back this morning from a week long trip to Rigel 7.
-	- J: I don't believe you.
-		V\: Well that's your choice. Now if you'll excuse me, I have a masterpiece to finish.
-	- J: Alright, sounds plausible.
-		V\: Cool. Now leave me alone.
-	if {inventory.bizcard} == true:
-		- J: What about this business card I found in his Jacket?
+	- J: Sorry to bother you
+		<Empty Text Event>
+		V\: You should be. Now leave me alone, your presence is sapping my talent.
+	- J: Did you kill my brother?
+		V\: So Jeremiah finally bit it, eh?
+		Figured it'd happen sooner or later. Always stickin' his nose where it didn't belong.
+		But no, I didn't kill him. I assume it happened last night, yeah?
+		We got back this morning from a week long trip to Rigel 7.
+		- J: I don't believe you.
+			V\: Well that's your choice. Now if you'll excuse me, I have a masterpiece to finish.
+		- J: Alright, sounds plausible.
+			V\: Cool. Now leave me alone.
+		- J: What about this business card I found in his Jacket? | [if {inventory.bizcard}]
 			V\: That's one of ours alright. Couldn't tell ya how he got it.
 			Must have been a sloppy job if the corpse was still there.
 			If I'd done it, you'd never have seen him again.
