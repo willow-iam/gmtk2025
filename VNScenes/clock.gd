@@ -7,3 +7,7 @@ func on_press():
 		Dialogic.start("EarlyClock")
 	else:
 		Dialogic.start("OpenClock")
+
+func process():
+	GameClock.timer.paused = Dialogic.current_timeline!=null
+		

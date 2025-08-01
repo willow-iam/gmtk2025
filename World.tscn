@@ -1,8 +1,11 @@
-[gd_scene load_steps=7 format=4 uid="uid://d4la14pmewfip"]
+[gd_scene load_steps=11 format=4 uid="uid://d4la14pmewfip"]
 
 [ext_resource type="Texture2D" uid="uid://hb40xfa0785" path="res://tilesets/Art by Sophie Bosak/Tiles/Floor/Floor.png" id="1_c6gwx"]
 [ext_resource type="Texture2D" uid="uid://duyseer574nx1" path="res://characters/dinoCharactersVersion1.1/sheets/DinoSprites - doux.png" id="2_2dftf"]
 [ext_resource type="Script" uid="uid://bwb06op4vkds6" path="res://player.gd" id="2_bcbcq"]
+[ext_resource type="PackedScene" uid="uid://bqseh0du8t61r" path="res://game_clock.tscn" id="3_p1v5b"]
+[ext_resource type="PackedScene" uid="uid://bi6wq46p6bxan" path="res://Interactable.tscn" id="4_js7pq"]
+[ext_resource type="Resource" uid="uid://b74kvllhld8uk" path="res://VNScenes/Intro.dtl" id="5_eu7l1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2dftf"]
 texture = ExtResource("1_c6gwx")
@@ -48,11 +51,13 @@ sources/1 = SubResource("TileSetAtlasSource_2dftf")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_js7pq"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcbcq"]
+
 [node name="World" type="Node2D"]
 texture_filter = 1
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAD+//7/AQAJAAEAAAD///7/AQAKAAEAAAAAAP7/AQAKAAEAAAABAP7/AQAJAAEAAFD+////AQAJAAIAAAD+/wAAAQAJAAIAAAD+/wEAAQAJAAEAAGD//wEAAQAKAAEAADAAAAEAAQAKAAEAADABAP//AQALAAEAAFABAAAAAQALAAEAAFABAAEAAQAJAAEAADD/////AQADAAIAAAD//wAAAQADAAIAAAAAAAAAAQADAAIAAAAAAP//AQADAAIAAAA=")
+tile_map_data = PackedByteArray("AAD/////AQADAAIAAAD+////AQAJAAIAAAD+//7/AQAJAAEAAAD///7/AQAKAAEAAAAAAP7/AQAKAAEAAAAAAP//AQADAAIAAAABAP//AQALAAEAAFAAAAEAAQAKAAEAADABAAEAAQAJAAEAADABAP7/AQAJAAEAAFD//wEAAQAKAAEAADD+/wEAAQAJAAEAAGD+/wAAAQAJAAIAAAD//wAAAQADAAIAAAAAAAAAAQADAAIAAAABAAAAAQALAAEAAFA=")
 tile_set = SubResource("TileSet_bcbcq")
 
 [node name="Player" type="CharacterBody2D" parent="."]
@@ -60,13 +65,28 @@ motion_mode = 1
 floor_stop_on_slope = false
 script = ExtResource("2_bcbcq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+[node name="Hitbox" type="CollisionShape2D" parent="Player"]
 shape = SubResource("CapsuleShape2D_js7pq")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(8, 8)
-position_smoothing_enabled = true
+
+[node name="GameClock" parent="Player/Camera2D" instance=ExtResource("3_p1v5b")]
+offset_left = 448.0
+offset_top = 262.0
+offset_right = 528.0
+offset_bottom = 285.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
 texture = ExtResource("2_2dftf")
 hframes = 25
+
+[node name="InteractRange" type="ShapeCast2D" parent="Player"]
+rotation = 0.785398
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_bcbcq")
+target_position = Vector2(0, 0)
+max_results = 2
+
+[node name="mort" parent="." instance=ExtResource("4_js7pq")]
+position = Vector2(45, -22)
+timeline = ExtResource("5_eu7l1")
