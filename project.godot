@@ -22,7 +22,12 @@ GameClock="*res://game_clock.tscn"
 
 [dialogic]
 
-directories/dch_directory={}
+directories/dch_directory={
+"Chief": "res://characters/Chief.dch",
+"Granny": "res://characters/Granny.dch",
+"Jiminy": "res://characters/Jiminy.dch",
+"Mayor": "res://characters/Mayor.dch"
+}
 directories/dtl_directory={
 "BackAlley": "res://VNScenes/BackAlley.dtl",
 "Backpack": "res://VNScenes/Backpack.dtl",
