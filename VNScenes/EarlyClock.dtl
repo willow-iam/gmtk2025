@@ -1,1 +1,4 @@
-It tells the time. Not sure why it's here, everyone has a watch.
+if {} < "240":
+	It tells the time. Not sure why it's here, everyone has a watch.
+else:
+	jump OpenClock/

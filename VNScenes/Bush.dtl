@@ -1,5 +1,6 @@
-There's a key in here!
-Take it?
-- Yes
-	set {inventory.key} = false
-- No
+if {inventory.key} == false:
+	There's a key in here!
+	I'll take it.
+	set {inventory.key} = true
+else:
+	There was a key in here. Now it's just a bush.

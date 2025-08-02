@@ -2,4 +2,5 @@ Oh wow. There are a lot of paintings down here. Each one is signed “Vincent va
 Take one?
 - Yes
 	set {inventory.painting} = true
+	[signal arg="unlock"]
 - No

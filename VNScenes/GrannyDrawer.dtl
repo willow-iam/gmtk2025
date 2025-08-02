@@ -2,5 +2,6 @@
 if {Answer} == "9040":
 	It looks like some kind of invitation and a pair of handcuffs. I'll take them.
 	set {inventory.handcuffs} = true
+	[signal arg="unlock"]
 else:
 	Nope, that's not it.

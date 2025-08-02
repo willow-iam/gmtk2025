@@ -1,7 +1,7 @@
-CollisionPolygon2D
 CollisionShape2D
 Interactable
+Doorway
+CollisionPolygon2D
 Sprite2D
 AnimatedSprite2D
-Doorway
 Area2D

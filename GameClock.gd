@@ -19,4 +19,5 @@ func restart():
 func _process(_delta: float) -> void:
 	timer.paused = Dialogic.current_timeline!=null
 	text = "11:%02d:%02d"%[(60-max_time+int(time/60)), (time%60)]
+	Dialogic.VAR.set_variable("time",time)
 	

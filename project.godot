@@ -97,7 +97,8 @@ variables={
 "Mafia": false,
 "Mayor": false,
 "Rug": false
-}
+},
+"time": 0
 }
 layout/style_directory={}
 audio/channel_defaults={

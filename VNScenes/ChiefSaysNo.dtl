@@ -1,2 +1,11 @@
-Chief (Yell): Don't think I can't see you.
-Chief (Angry): Open that and you're dead.
+if {time} < 150.0:
+	Chief (Yell): Don't think I can't see you. {time}
+	Chief (Angry): Open that and you're dead.
+elif 150 < {time}  and {time} < 165:
+	if {inventory.key} == true:
+		I unlocked the door with the key from the bush.
+		[signal arg="unlock"]
+	else:
+		Darn! It's locked!
+else:
+	ERROR\: For security reasons, this door locks 15 seconds after the chief leaves.

@@ -11,5 +11,5 @@ func on_press():
 	elif GameClock.time>ChiefInOffice.exitTime+openTime:
 		Dialogic.start("ClosedDesk")
 	else:
-		Dialogic.start("OpenDesk")
+		Dialogic.emit_signal("unlock")
 		#TODO: desk timer
