@@ -13,9 +13,6 @@ func _ready() -> void:
 	restart()
 
 func restart():
-	restart()
-
-func restart():
 	timer = get_child(0)
 	timer.start(max_time*60)
 

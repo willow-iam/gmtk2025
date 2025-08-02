@@ -15,7 +15,6 @@ func get_input():
 	velocity = input_direction * speed
 
 func _physics_process(_delta):
-func _physics_process(_delta):
 	if not Dialogic.current_timeline:
 		get_input()
 		move_and_slide()
