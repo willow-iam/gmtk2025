@@ -23,4 +23,9 @@ func _physics_process(_delta):
 				var that = interact_range.get_collider(i)
 				if that is Interactable and Input.is_action_pressed("interact"):
 					Dialogic.start(that.timeline)
+					#Dialogic.VAR.set_variable("spoken.%s"%(that.name as String), true)
+					Dialogic.timeline_ended.connect(
+						func():
+							Dialogic.VAR.set_variable("spoken.%s"%(that.name as String), true)
+					)
 					return
