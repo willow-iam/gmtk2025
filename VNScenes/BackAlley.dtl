@@ -1,49 +1,45 @@
 if {spoken.Mayor} == true:
-	V\: Don't think I didn't hear you in there.
-	I don't know what you told him, but I keep my dealings with him very confidential.
-	I can't be associating with anyone who talks to him.
+	"Vincent Van Mafia": Don't think I didn't hear you in there.
+	"Vincent Van Mafia": I don't know what you told him, but I keep my dealings with him very confidential.
+	"Vincent Van Mafia": I can't be associating with anyone who talks to him.
 elif {spoken.Mafia} == true:
-	V\: I don't have time, Kid. Leave me alone.
+	"Vincent Van Mafia": I don't have time, Kid. Leave me alone.
 else:
-	V\: What do you want, kid? You're blocking my view
+	"Vincent Van Mafia": What do you want, kid? You're blocking my view
 	
-	- J: Want some paint? | [if {inventory.paint}]
-		<Empty Text Event>
-		<Empty Text Event>
-		V\: Wait, what? Let's see here...
-		<Empty Text Event>
-		Ambitious Amber. Beautiful color. You're in luck, I just ran out of what I had.
-		Well, you know the deal. What do you wanna know?
-		J\: My brother's dead.
-		V\: So Jeremiah finally bit it, eh?
-		Figured it'd happen sooner or later. Always-
-		J\: What do you know about it?
-		V\: Jeez, have some patience why don't ya?
-		I may not know anything about it, but the police probably do.
-		J\: They ruled it a suicide.
-		V\: Knowing them, they don't actually believe that.
-		We've got a word for people like them back on Mars.
-		...
-		Anyway, if you wanna see what they've got, they leave the key to their back office in the bushes they got outside their door.
-		Anyway, thanks for the paint, kid. Be seein' ya.
-	- J: Sorry to bother you
-		<Empty Text Event>
-		V\: You should be. Now leave me alone, your presence is sapping my talent.
-	- J: Did you kill my brother?
-		V\: So Jeremiah finally bit it, eh?
-		Figured it'd happen sooner or later. Always stickin' his nose where it didn't belong.
-		But no, I didn't kill him. I assume it happened last night, yeah?
-		We got back this morning from a week long trip to Rigel 7.
-		- J: I don't believe you.
-			V\: Well that's your choice. Now if you'll excuse me, I have a masterpiece to finish.
-		- J: Alright, sounds plausible.
-			V\: Cool. Now leave me alone.
-		- J: What about this business card I found in his Jacket? | [if {inventory.bizcard}]
-			V\: That's one of ours alright. Couldn't tell ya how he got it.
-			Must have been a sloppy job if the corpse was still there.
-			If I'd done it, you'd never have seen him again.
-			I'll tell you though, if I had to point fingers it would be at that geezer who lives next to you.
-			J\: You mean my granny?
-			V\: Yeah, that one. Higher body count than me. Plus, I thought I saw something weird under the rug there once.
-			Now listen, I don't have any more time to spare. I'm gonna be selling this thing in the Centauri system soon and my shuttle leaves at 12.
-			So beat it.
+	- Want some paint? | [if {inventory.paint}]
+		"Vincent Van Mafia": V\: Wait, what? Let's see here...
+		"Vincent Van Mafia": Ambitious Amber. Beautiful color. You're in luck, I just ran out of what I had.
+		"Vincent Van Mafia": Well, you know the deal. What do you wanna know?
+		Jiminy (Default): My brother's dead.
+		"Vincent Van Mafia": So Jeremiah finally bit it, eh?
+		"Vincent Van Mafia": Figured it'd happen sooner or later. Always-
+		Jiminy: What do you know about it?
+		"Vincent Van Mafia":  Jeez, have some patience why don't ya?
+		"Vincent Van Mafia": I may not know anything about it, but the police probably do.
+		Jiminy (Sigh): J\: They ruled it a suicide.
+		"Vincent Van Mafia": V\: Knowing them, they don't actually believe that.
+		"Vincent Van Mafia": We've got a word for people like them back on Mars.
+		"Vincent Van Mafia": ...
+		"Vincent Van Mafia": Anyway, if you wanna see what they've got, they leave the key to their back office in the bushes they got outside their door.
+		"Vincent Van Mafia": Well, thanks for the paint, kid. Be seein' ya.
+	- Sorry to bother you
+		"Vincent Van Mafia": V\: You should be. Now leave me alone, your presence is sapping my talent.
+	- Did you kill my brother?
+		"Vincent Van Mafia": V\: So Jeremiah finally bit it, eh?
+		"Vincent Van Mafia": Figured it'd happen sooner or later. Always stickin' his nose where it didn't belong.
+		"Vincent Van Mafia": But no, I didn't kill him. I assume it happened last night, yeah?
+		"Vincent Van Mafia": We got back this morning from a week long trip to Rigel 7.
+		- I don't believe you.
+			"Vincent Van Mafia": Well that's your choice. Now if you'll excuse me, I have a masterpiece to finish.
+		- Alright, sounds plausible.
+			"Vincent Van Mafia": Cool. Now leave me alone.
+		- What about this business card I found in his Jacket? | [if {inventory.bizcard}]
+			"Vincent Van Mafia": That's one of ours alright. Couldn't tell ya how he got it.
+			"Vincent Van Mafia": Must have been a sloppy job if the corpse was still there.
+			"Vincent Van Mafia": If I'd done it, you'd never have seen him again.
+			"Vincent Van Mafia": I'll tell you though, if I had to point fingers it would be at that geezer who lives next to you.
+			Jiminy (Pensive): You mean my granny?
+			"Vincent Van Mafia": Yeah, that one. Higher body count than me. Plus, I thought I saw something weird under one of her rugs.
+			"Vincent Van Mafia": Now listen, I don't have any more time to spare. I'm gonna be selling this thing in the Centauri system soon and my shuttle leaves at 12.
+			"Vincent Van Mafia": So beat it.

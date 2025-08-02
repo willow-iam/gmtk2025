@@ -1,7 +1,7 @@
 extends Area2D
 class_name Doorway
 @export var destination : Vector2
-#a
+
 func _ready() -> void:
 	if destination == Vector2(0,0):
 		if has_node("Exit"):

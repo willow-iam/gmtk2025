@@ -8,11 +8,13 @@ func _ready():
 	interact_range = get_node("InteractRange") as ShapeCast2D
 	interact_range.add_exception(self)
 	GameClock.restart()
+	Dialogic.start("Intro")
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * speed
 
+func _physics_process(_delta):
 func _physics_process(_delta):
 	if not Dialogic.current_timeline:
 		get_input()
@@ -23,6 +25,11 @@ func _physics_process(_delta):
 				var that = interact_range.get_collider(i)
 				if that is Interactable and Input.is_action_pressed("interact"):
 					Dialogic.start(that.timeline)
+					#Dialogic.VAR.set_variable("spoken.%s"%(that.name as String), true)
+					Dialogic.timeline_ended.connect(
+						func():
+							Dialogic.VAR.set_variable("spoken.%s"%(that.name as String), true)
+					)
 					#Dialogic.VAR.set_variable("spoken.%s"%(that.name as String), true)
 					Dialogic.timeline_ended.connect(
 						func():

@@ -1,1 +1,27 @@
-O: I'm going out for some milk. I might not be back for a while.
+if {journal_unlocked} and {inventory.painting} and {inventory.handcuffs}:
+	Cuff her?
+	- Yes
+		Granny (Angry): Hey, what the hell are you doing?
+		Jiminy (Angry): You're under arrest for the murder of my brother.
+		label qGranny
+		Granny (Angry): I told you already, I didn't do it! What evidence do you have?
+		if {journal_unlocked} or {inventory.painting} or {inventory.handcuffs}:
+			- Present Journal | [if {journal_unlocked} == true]
+				Granny (Angry): Why in the world would you think "office" refers to my quarters?
+				set {journal_unlocked} = false
+				jump qGranny
+			- Present Painting | [if {inventory.painting} == true]
+				Granny (Angry): What the hell is this?
+				set {inventory.painting} = false
+				jump qGranny
+			- Present Invitation | [if {inventory.handcuffs} == true]
+				Granny (Angry): What the hell is this?
+				set {inventory.handcuffs} = false
+				jump qGranny
+		Jiminy (Sweat): I... uh... Well, you have a lot of guns!
+		Granny (Angry): I don't own a single pistol. If I shot Jeremiah I would have blown his head off!
+		Jiminy (Sigh): Well... jeez, I didn't think this through.
+		[signal arg="reset"]
+	- No
+	else:
+		Granny (Look): I'm going out for some milk. I might not be back for a while.
