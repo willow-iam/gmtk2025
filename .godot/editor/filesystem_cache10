@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1754093717
+::res://::1754110192
 BaseScene.tscn::PackedScene/PackedScene::2193145946176686255::1754075287::0::1::::<><><>0<>0<><>::uid://dl14cyefk4sp::::res://dialogic_scene.gd<>uid://1tuktt4ypr7q::::res://WorldButton.gd
 Cabinet.dtl::Resource/DialogicTimeline::-1::1754075287::0::1::::<><><>0<>0<><>::
 dialogic_button.gd::GDScript/GDScript::3612837913376108557::1754075287::0::1::::Dialogic_Button<>Button<><>0<>0<><>::
@@ -14,7 +14,7 @@ inventory_button.gd::GDScript/GDScript::8165545322256222046::1754092440::0::1:::
 player.gd::GDScript/GDScript::3934213665759142415::1754092440::0::1::::<>CharacterBody2D<><>0<>0<><>::
 Winventory.dtl::Resource/DialogicTimeline::-1::1754092440::0::1::::<><><>0<>0<><>::
 world.gd::GDScript/GDScript::2214558212126879002::1754092440::0::1::::World<>Node2D<><>0<>0<><>::
-World.tscn::PackedScene::9217494649419088739::1754093705::0::1::::<><><>0<>0<><>::uid://6s0pko1dyx11::::res://world.gd<>uid://duyseer574nx1::::res://characters/dinoCharactersVersion1.1/sheets/DinoSprites - doux.png<>uid://d32tx2gbkeivi::::res://tilesets/BaseTiles.png<>uid://bwb06op4vkds6::::res://player.gd<>uid://bqseh0du8t61r::::res://game_clock.tscn<>uid://bi6wq46p6bxan::::res://Interactable.tscn<>uid://dolplrixsw6bq::::res://inventory_button.gd<>uid://b74kvllhld8uk::::res://VNScenes/Intro.dtl
+World.tscn::PackedScene::9217494649419088739::1754110192::0::1::::<><><>0<>0<><>::uid://6s0pko1dyx11::::res://world.gd<>uid://duyseer574nx1::::res://characters/dinoCharactersVersion1.1/sheets/DinoSprites - doux.png<>uid://dfu4m888ro681::::res://tilesets/BaseTiles.png<>uid://bwb06op4vkds6::::res://player.gd<>uid://bqseh0du8t61r::::res://game_clock.tscn<>uid://bi6wq46p6bxan::::res://Interactable.tscn<>uid://dolplrixsw6bq::::res://inventory_button.gd<>uid://b74kvllhld8uk::::res://VNScenes/Intro.dtl<>uid://cbksxh2s53emg::::res://characters/EssentialProps.png
 WorldButton.gd::GDScript/GDScript::1865366338355602284::1754075287::0::1::::<>Button<><>0<>0<><>::
 world_map.gd::GDScript/GDScript::8046230766061792355::1754075287::0::1::::<>BaseDialogic<><>0<>0<><>::
 ::res://addons/::1754075287
@@ -633,8 +633,10 @@ THIRDPARTY.md::TextFile/TextFile::-1::1754075287::0::1::::<><><>0<>0<><>::
 ::res://addons/godot-git-plugin-v3.1.1/addons/godot-git-plugin/linux/::1754075287
 ::res://addons/godot-git-plugin-v3.1.1/addons/godot-git-plugin/macos/::1754075287
 ::res://addons/godot-git-plugin-v3.1.1/addons/godot-git-plugin/win64/::1754093712
-::res://characters/::1754092980
+::res://characters/::1754111570
+Characters.png::CompressedTexture2D::7635959586527028896::1754107800::1754107800::1::::<><><>0<>0<>db3e853f5995be34de418b84d3b94505<>res://.godot/imported/Characters.png-2d0e56b20d74b4453eaa76d0fca55723.ctex::
 Chief.dch::Resource/DialogicCharacter::-1::1754092440::0::1::::<><><>0<>0<><>::
+EssentialProps.png::CompressedTexture2D::4864808377926644718::1754107855::1754107855::1::::<><><>0<>0<>259158db491817d750350b017c54fc7f<>res://.godot/imported/EssentialProps.png-0a4b67b66845752459d051e9c9a1006b.ctex::
 Granny.dch::Resource/DialogicCharacter::-1::1754092440::0::1::::<><><>0<>0<><>::
 Jiminy.dch::Resource/DialogicCharacter::-1::1754092440::0::1::::<><><>0<>0<><>::
 Mayor.dch::Resource/DialogicCharacter::-1::1754092440::0::1::::<><><>0<>0<><>::
@@ -643,6 +645,7 @@ ph_chief.jpg::CompressedTexture2D/CompressedTexture2D::6368601734225622218::1754
 ph_granny.jpg::CompressedTexture2D/CompressedTexture2D::8659676942154518640::1754075287::1754092980::1::::<><><>0<>0<>22cae9c99ecc26d3154f686cc6f95147<>res://.godot/imported/ph_granny.jpg-136559390638353747ff8c7d2860b76c.ctex::
 ph_inventory.jpg::CompressedTexture2D/CompressedTexture2D::1377231292088110563::1754075287::1754092980::1::::<><><>0<>0<>6c5a287544b77fe8b47190b4cb9ad2b9<>res://.godot/imported/ph_inventory.jpg-8f5e9c0882b52e0ccedf0679c49540d3.ctex::
 ph_mayor.jpg::CompressedTexture2D/CompressedTexture2D::4052627218541531562::1754075287::1754092980::1::::<><><>0<>0<>d4169bcc1c6825d53c6dd0f2391d2900<>res://.godot/imported/ph_mayor.jpg-923a61312be9230a189fb4aae88d8c42.ctex::
+PropsRound2.png::CompressedTexture2D::8142745394727877401::1754111570::1754111570::1::::<><><>0<>0<>65423be617ab16cf7c5d2dba195cb5c4<>res://.godot/imported/PropsRound2.png-de8de211b9a6459a4a2d904bf69ab553.ctex::
 Spritesheet.png::CompressedTexture2D/CompressedTexture2D::1023798904695261199::1754092440::1754092980::1::::<><><>0<>0<>a1d958edb4f2cd52e0fb5aa1c50d654c<>res://.godot/imported/Spritesheet.png-75e222545a657bfc5e17587dcccd72e3.ctex::
 ::res://characters/dinoCharactersVersion1.1/::1754075287
 changelog.txt::TextFile/TextFile::-1::1754075287::0::1::::<><><>0<>0<><>::
