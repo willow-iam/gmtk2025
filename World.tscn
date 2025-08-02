@@ -1,7 +1,6 @@
-[gd_scene load_steps=46 format=4 uid="uid://d4la14pmewfip"]
+[gd_scene load_steps=45 format=4 uid="uid://d4la14pmewfip"]
 
 [ext_resource type="Script" uid="uid://6s0pko1dyx11" path="res://world.gd" id="1_bah7m"]
-[ext_resource type="Texture2D" uid="uid://duyseer574nx1" path="res://characters/dinoCharactersVersion1.1/sheets/DinoSprites - doux.png" id="2_2dftf"]
 [ext_resource type="Texture2D" uid="uid://dfu4m888ro681" path="res://tilesets/BaseTiles.png" id="2_bah7m"]
 [ext_resource type="Script" uid="uid://bwb06op4vkds6" path="res://player.gd" id="2_bcbcq"]
 [ext_resource type="PackedScene" uid="uid://bqseh0du8t61r" path="res://game_clock.tscn" id="3_p1v5b"]
@@ -774,7 +773,7 @@ sources/1 = SubResource("TileSetAtlasSource_fvag4")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_js7pq"]
 radius = 2.0
-height = 10.0
+height = 14.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bcbcq"]
 
@@ -835,13 +834,13 @@ tile_set = SubResource("TileSet_fvag4")
 
 [node name="Player" type="CharacterBody2D" parent="."]
 z_index = 10
-position = Vector2(1180, -88)
+position = Vector2(1179, -96)
 motion_mode = 1
 floor_stop_on_slope = false
 script = ExtResource("2_bcbcq")
 
 [node name="Hitbox" type="CollisionShape2D" parent="Player"]
-position = Vector2(0, 6)
+position = Vector2(2, 14)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_js7pq")
 
@@ -863,10 +862,12 @@ text = "Inventory"
 script = ExtResource("4_wygdx")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
-texture = ExtResource("2_2dftf")
-hframes = 25
+texture = ExtResource("12_f5c0m")
+hframes = 14
+vframes = 5
 
 [node name="InteractRange" type="ShapeCast2D" parent="Player"]
+position = Vector2(1, 0)
 rotation = 0.785398
 scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_bcbcq")
