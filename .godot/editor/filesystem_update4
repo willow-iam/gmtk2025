@@ -1,1 +1,11 @@
 res://World.tscn
+res://player.gd
+res://characters/Granny.dch
+res://GameClock.gd
+res://Cabinet.dtl
+res://VNScenes/Granny.dtl
+res://VNScenes/GrannyStation.dtl
+res://characters/Jiminy.dch
+res://VNScenes/MafiaStation.dtl
+res://VNScenes/MyQuarters.dtl
+res://VNScenes/Pigpen.dtl
