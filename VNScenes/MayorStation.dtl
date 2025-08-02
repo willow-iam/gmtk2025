@@ -1,2 +1,29 @@
-B: The governor wants to see me.
-It was so last minute, too. This is why I hate my job.
+if {journal_unlocked} and {inventory.painting} and {inventory.handcuffs}:
+	Cuff him?
+	- Yes
+		Mayor: Oh no, the feds!
+		Mayor: Oh wait, it's just you.
+		Jiminy (Angry): You're under arrest for the murder of my brother.
+		Mayor: Would you mind presenting some evidence to back that up?
+		- Present Journal
+			label qJournal
+			"Vincent Van Mafia": You think that's the mayor's office? Why?
+		- Present Painting
+			Mayor: You found that in my basement?
+			Mayor: Also, I have a basement?
+			Mayor: Do you have anything better?
+			- Present Journal
+				jump qJournal
+			- Present Painting
+				jump qInvitation
+		- Present Invitation
+			label qInvitation
+			How does this have anything to do with me?
+		Jiminy (Sweat): Well you see, uh...
+		Jiminy (Pensive): Come to think of it I actually don't know.
+		Mayor: Hey, it's alright, we all make mistakes. Just give me your firstborn child and we'll be even, alright?
+		[signal arg="reset"]
+	- No
+	else:
+		Mayor: The governor wants to see me.
+		Mayor: It was so last minute, too. This is why I hate my job.

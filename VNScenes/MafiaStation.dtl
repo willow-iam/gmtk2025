@@ -1,1 +1,26 @@
-V: Anyone asks, I'm already on the train.
+if {journal_unlocked} and {inventory.painting} and {inventory.handcuffs}:
+	Cuff him?
+	- Yes
+		"Vincent Van Mafia": You'd better not be trying to cuff me.
+		Jiminy (Angry): You're under arrest for the murder of my brother.
+		label qMafia
+		"Vincent Van Mafia": You better have some damn good evidence.
+		if {journal_unlocked} or {inventory.painting} or {inventory.handcuffs}:
+			- Present Journal | [if {journal_unlocked} == true]
+				"Vincent Van Mafia": What office? We're not idiots, we decentralized a long time ago.
+				set {journal_unlocked} = false
+				jump qMafia
+			- Present Painting | [if {inventory.painting} == true]
+				"Vincent Van Mafia": Yes, I painted that. Your point being?
+				set {inventory.painting} = false
+				jump qMafia
+			- Present Invitation | [if {inventory.handcuffs} == true]
+				"Vincent Van Mafia": Yes, that's where we came back from this morning.
+				set {inventory.handcuffs} = false
+				jump qMafia
+		Jiminy (Sweat): Uuuuhhhhh...
+		"Vincent Van Mafia": Kid, you just made yourself a powerful enemy.
+		[signal arg="reset"]
+	- No
+	else:
+		"Vincent Van Mafia": Anyone asks, I'm already on the train.

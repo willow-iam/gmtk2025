@@ -1,7 +1,5 @@
 [text_input text="It's locked with a 5-digit code" var="Answer"]
 if {Answer} == "27853":
-	Oh wow. There are a lot of paintings down here. Each one is signed “Vincent van Mafia.”
-	I think I'll take one.
-	set {inventory.painting} = true
+	label Open the door here
 else:
 	Nope, that's not it.

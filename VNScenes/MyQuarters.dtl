@@ -2,5 +2,3 @@
 	Yup, that’s him alright. It seems like he was carrying his will and some kind of business card. I’ll keep them with me in case they’re important.
 	set {inventory.will} = true
 	set {inventory.bizcard} = true
-	His Journal is on the floor next to his body. It's locked, but I'll grab that too.
-	set {inventory.journal} = true

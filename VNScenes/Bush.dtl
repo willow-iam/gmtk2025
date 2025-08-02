@@ -1,0 +1,5 @@
+There's a key in here!
+Take it?
+- Yes
+	set {inventory.key} = false
+- No

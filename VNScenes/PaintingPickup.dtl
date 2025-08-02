@@ -1,0 +1,5 @@
+Oh wow. There are a lot of paintings down here. Each one is signed “Vincent van Mafia.”
+Take one?
+- Yes
+	set {inventory.painting} = true
+- No
