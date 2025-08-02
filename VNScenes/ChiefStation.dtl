@@ -1,3 +1,63 @@
-G: You're still looking? You're persistent, I'll give you that.
-And don't even think about going into the back while I'm gone.
-My office has a 15 second time lock from when I close the door. You're already too late.
+if {journal_unlocked} and {inventory.painting} and {inventory.handcuffs}:
+	Chief (Yell): Hey, what's going on?
+	Jiminy (Angry): You're under arrest for the murder of my brother.
+	Chief (Angry): That's ridiculous, I'm a cop! What evidence do you even have?
+	if {journal_unlocked} or {inventory.painting} or {inventory.handcuffs}:
+		- Present Journal | [if {journal_unlocked} == true]
+			label qJournal
+			set {presented_count} += 1
+			Chief (Yell): What makes you think that was my office?
+			Jiminy (Angry): The busted up door.
+			Jiminy (Angry): Jeremiah was looking into your shady dealings with the mafia and got caught.
+			Jiminy (Angry): He busted up the back door trying to escape you.
+			if {presented_count}<3:
+				Chief (SweatLeft): If you think the Mafia is involved, why not accuse them?
+				Jiminy (Sus): Because of this.
+				if {inventory.handcuffs}:
+					jump qInvitation
+				else:
+					jump Close
+			else:
+				jump Close
+		- Present Painting | [if {inventory.painting} == true]
+			label qPainting
+			set {presented_count} += 1
+			Chief (Yell): That was in the mayor's basement, you idiot.
+			Jiminy (Pensive): True, but why did you have that code in your desk?
+			Chief (SweatRight): It could have been placed there to frame me!
+			Jiminy (Angry): These were given to you by the mafia as bribes, weren't they?
+			Jiminy (Angry): Killing Jeremiah while he was investigating you would have made you seem guilty, so you had to be extra careful to hide your dealings with the mob.
+			if {presented_count}<3:
+				What makes you think he was investigating me?
+				Jiminy (Angry): It says so right here in his journal.
+				if {journal_unlocked}:
+					jump qJournal
+				else:
+					jump Close
+			else:
+				jump Close
+		- Present Invitation | [if {inventory.handcuffs} == true]
+			label qInvitation
+			set {presented_count} += 1
+			Chief (SweatLeft): What the hell is this?
+			Jiminy (Sus): An invitation to the mafia's getaway on Rigel 7, addressed to my brother.
+			Jiminy (Look): They WERE planning on killing him there hide any evidence, but he knew what they were doing and never showed up.
+			Jiminy (Angry): You're the only one in this web of lies who has no clear alibi.
+			if {presented_count}<3:
+				Chief (SweatRight): What web of lies? What are you talking about?
+				Jiminy (Sus): Why don't you tell me what this painting is?
+				if {inventory.painting}:
+					jump qPainting
+				else:
+					jump Close
+	label Close
+	Jiminy (Sus): The mayor was doing paperwork, and my Granny doesn't own any gun that could make that kind of wound.
+	Jiminy (Angry): You are the only person who could have done this.
+	Chief (SweatLeft): Big deal. Cops dealing with the mafia, cops killing people, cops have been doing those things since the beginning of time.
+	Chief (Angry): Just give me that slap on the wrist and let me get on with my life.
+	Jiminy (Look): Conductor, would you mind making a pit stop at the local courthouse?
+	Not at all!
+	else:
+		Chief (Default): You're still looking? You're persistent, I'll give you that.
+		Chief (EyesClosed): And don't even think about going into the back while I'm gone.
+		Chief (Default): My office has a 15 second time lock from when I close the door. You're already too late.

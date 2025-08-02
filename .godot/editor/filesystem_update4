@@ -1,1 +1,21 @@
+res://characters/Chief.dch
+res://characters/Granny.dch
+res://characters/Jiminy.dch
+res://characters/Mayor.dch
+res://characters/Vincent Van Mafia.dch
+res://VNScenes/Granny.dtl
+res://VNScenes/GrannyStation.dtl
+res://VNScenes/MafiaStation.dtl
+res://VNScenes/Mayor.dtl
+res://VNScenes/MayorBasement.dtl
+res://VNScenes/MayorStation.dtl
+res://VNScenes/MyQuarters.dtl
+res://VNScenes/Pigpen.dtl
+res://VNScenes/UseCuffs.dtl
+res://characters/Portraits/ezgif-split/New_File.tres
 res://World.tscn
+res://VNScenes/ChiefStation.dtl
+res://VNScenes/JournalPickup.dtl
+res://VNScenes/PaintingPickup.dtl
+res://VNScenes/Bush.dtl
+res://VNScenes/Inventory.tscn

@@ -8,16 +8,62 @@
 "sound_moods": {},
 "style": ""
 },
-&"default_portrait": "New portrait",
+&"default_portrait": "Default",
 &"description": "",
-&"display_name": "Granny",
+&"display_name": "Granny Jilikers",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
-"New portrait": {
+"Angry": {
 "export_overrides": {
-"image": "\"res://characters/Portraits/ezgif-split/tile029.png\""
+"image": "\"res://characters/Portraits/characters/21.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Default": {
+"export_overrides": {
+"image": "\"res://characters/Portraits/characters/16.png\""
+},
+"ignore_char_scale": true,
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Discontent": {
+"export_overrides": {
+"image": "\"res://characters/Portraits/characters/18.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Happy": {
+"export_overrides": {
+"image": "\"res://characters/Portraits/characters/17.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Look": {
+"export_overrides": {
+"image": "\"res://characters/Portraits/characters/GrannyLookFixed.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Sigh": {
+"export_overrides": {
+"image": "\"res://characters/Portraits/characters/19.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
