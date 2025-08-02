@@ -1,1 +1,15 @@
 res://World.tscn
+res://characters/Granny.dch
+res://VNScenes/Inventory.tscn
+res://VNScenes/MyQuarters.tscn
+res://VNScenes/Shuttlebay.tscn
+res://VNScenes/Pigpen.tscn
+res://VNScenes/Intro.tscn
+res://game_clock.tscn
+res://Interactable.tscn
+res://Doorway.tscn
+res://doorway.gd
+res://Doorway_Exit.tscn
+res://doorway_exit.gd
+res://player.gd
+res://GameClock.gd

@@ -10,9 +10,12 @@ var time:
 			return max_time*60
 
 func _ready() -> void:
+	restart()
+
+func restart():
 	timer = get_child(0)
 	timer.start(max_time*60)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	text = "11:%02d:%02d"%[(60-max_time+int(time/60)), (time%60)]
 	
