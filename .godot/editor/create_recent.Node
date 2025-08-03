@@ -1,8 +1,9 @@
-StaticBody2D
-Sprite2D
-CollisionPolygon2D
+AudioStreamPlayer
 CollisionShape2D
 Interactable
+CollisionPolygon2D
+StaticBody2D
+Sprite2D
 PathFollow2D
 Path2D
 CharacterMotion
@@ -11,4 +12,3 @@ AnimationPlayer
 AnimationTree
 Node2D
 Node
-Doorway

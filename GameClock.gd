@@ -18,6 +18,13 @@ func restart():
 
 func _process(_delta: float) -> void:
 	timer.paused = Dialogic.current_timeline!=null
-	text = "11:%02d:%02d"%[(60-max_time+int(time/60)), (time%60)]
+	if time<300:
+		text = "11:%02d:%02d"%[(60-max_time+int(time/60)), (time%60)]
+	else:
+		if time == 300:
+			get_node("AudioStreamPlayer").stream=load("res://audio/Noon.wav")
+			get_node("AudioStreamPlayer").play()
+		var temptime = time-300
+		text = "12:%02d:%02d"%[int(temptime/60), (temptime%60)]
 	Dialogic.VAR.set_variable("time",time)
 	

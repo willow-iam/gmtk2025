@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cfb8whubf7fph"
+path="res://.godot/imported/emily game.mp3-3e6a6d25eb31ac474b54f3392f40f762.mp3str"
+
+[deps]
+
+source_file="res://audio/emily game.mp3"
+dest_files=["res://.godot/imported/emily game.mp3-3e6a6d25eb31ac474b54f3392f40f762.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

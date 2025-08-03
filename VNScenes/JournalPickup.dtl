@@ -2,4 +2,5 @@ Jeremiah’s journal. It’s locked.
 Take it?
 - Yes
 	set {inventory.journal} = true
+	[signal arg="unlock"]
 - No

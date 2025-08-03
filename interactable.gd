@@ -15,7 +15,9 @@ func _ready() -> void:
 	lock_rotation=true
 
 func _physics_process(delta: float) -> void:
-	if GameClock.time>timeExit:
+	if GameClock.time>300:
+		queue_free()
+	elif GameClock.time>timeExit:
 		if path_i<len(directions):
 			if dist_left>0:
 				translate(directions[path_i]*delta)

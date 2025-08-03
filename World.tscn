@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=4 uid="uid://d4la14pmewfip"]
+[gd_scene load_steps=114 format=4 uid="uid://d4la14pmewfip"]
 
 [ext_resource type="Script" uid="uid://6s0pko1dyx11" path="res://world.gd" id="1_bah7m"]
 [ext_resource type="Texture2D" uid="uid://dfu4m888ro681" path="res://tilesets/BaseTiles.png" id="2_bah7m"]
@@ -946,9 +946,6 @@ size = Vector2(57, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3ffs"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6tx0c"]
-size = Vector2(24, 20)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gtthi"]
 size = Vector2(32, 20)
 
@@ -1021,26 +1018,11 @@ size = Vector2(33, 7)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m21jb"]
 size = Vector2(14, 10)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_88f54"]
-size = Vector2(7, 33)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fif40"]
 size = Vector2(14, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6xgc5"]
 size = Vector2(16, 7)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wmdyy"]
-size = Vector2(20, 3)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tlk5t"]
-size = Vector2(16, 3)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3wwj"]
-size = Vector2(16, 3)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2tffn"]
-size = Vector2(16, 2.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3rcb"]
 size = Vector2(33, 7)
@@ -1065,6 +1047,21 @@ size = Vector2(33, 7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f43k2"]
 size = Vector2(16, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_88f54"]
+size = Vector2(7, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wmdyy"]
+size = Vector2(20, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tlk5t"]
+size = Vector2(16, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3wwj"]
+size = Vector2(16, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2tffn"]
+size = Vector2(16, 2.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b2ar6"]
 size = Vector2(17, 9)
@@ -1478,14 +1475,6 @@ offset = Vector2(0, 0.5)
 region_enabled = true
 region_rect = Rect2(227, 62, 24, 21)
 
-[node name="Interactable" type="RigidBody2D" parent="SortingDaddy/EssentialProps3"]
-script = ExtResource("10_kva58")
-timeline = ExtResource("9_sjtuv")
-metadata/_custom_type_script = "uid://da8ssm54bxa2b"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/EssentialProps3/Interactable"]
-shape = SubResource("RectangleShape2D_i3ffs")
-
 [node name="EssentialProps4" type="Sprite2D" parent="SortingDaddy"]
 y_sort_enabled = true
 position = Vector2(684, -136)
@@ -1495,14 +1484,12 @@ region_enabled = true
 region_rect = Rect2(256, 62, 24, 21)
 
 [node name="Interactable" type="RigidBody2D" parent="SortingDaddy/EssentialProps4"]
-position = Vector2(6.15686, 0.829315)
 script = ExtResource("10_kva58")
 timeline = ExtResource("10_cvq6i")
 metadata/_custom_type_script = "uid://da8ssm54bxa2b"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/EssentialProps4/Interactable"]
-position = Vector2(-6.15686, 0)
-shape = SubResource("RectangleShape2D_6tx0c")
+shape = SubResource("RectangleShape2D_i3ffs")
 
 [node name="EssentialProps5" type="Sprite2D" parent="SortingDaddy"]
 y_sort_enabled = true
@@ -1721,6 +1708,20 @@ metadata/_custom_type_script = "uid://da8ssm54bxa2b"
 build_mode = 1
 polygon = PackedVector2Array(-4, -5, 15, -3, 15, 6, 5, 12, -13, 9, -13, -1)
 
+[node name="EssentialProps27" type="Sprite2D" parent="SortingDaddy"]
+y_sort_enabled = true
+position = Vector2(-470, -577)
+texture = ExtResource("9_fv4w7")
+offset = Vector2(0.5, 0.5)
+region_enabled = true
+region_rect = Rect2(208, 84, 27, 69)
+
+[node name="nonInteractable" type="StaticBody2D" parent="SortingDaddy/EssentialProps27"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/EssentialProps27/nonInteractable"]
+position = Vector2(0, 30)
+shape = SubResource("RectangleShape2D_rp4qs")
+
 [node name="EssentialProps23" type="Sprite2D" parent="SortingDaddy"]
 y_sort_enabled = true
 position = Vector2(-470, -577)
@@ -1930,54 +1931,158 @@ offset = Vector2(0.5, 0.5)
 region_enabled = true
 region_rect = Rect2(95, 57, 23, 25)
 
-[node name="PropsRound5" type="StaticBody2D" parent="SortingDaddy"]
-position = Vector2(564, -484)
+[node name="StaticBody2D" type="StaticBody2D" parent="SortingDaddy"]
+position = Vector2(687, -612)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound5"]
-position = Vector2(0, 13.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(-123, 141.5)
 shape = SubResource("RectangleShape2D_0vv3x")
 
-[node name="PropsRound6" type="StaticBody2D" parent="SortingDaddy"]
-position = Vector2(556, -530)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound6"]
-position = Vector2(0, 5.5)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(-131, 87.5)
 shape = SubResource("RectangleShape2D_8jjlf")
 
-[node name="PropsRound7" type="StaticBody2D" parent="SortingDaddy"]
-position = Vector2(725, -501)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound7"]
-position = Vector2(0, 5.5)
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(38, 116.5)
 shape = SubResource("RectangleShape2D_ylme8")
 
-[node name="PropsRound8" type="StaticBody2D" parent="SortingDaddy"]
-position = Vector2(694, -486)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound8"]
-position = Vector2(1, 13.5)
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(8, 139.5)
 shape = SubResource("RectangleShape2D_fsfaj")
 
-[node name="PropsRound9" type="StaticBody2D" parent="SortingDaddy"]
-position = Vector2(1153, -127)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound9"]
-position = Vector2(0, 5.5)
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(466, 490.5)
 shape = SubResource("RectangleShape2D_rhl3w")
 
-[node name="PropsRound37" type="StaticBody2D" parent="SortingDaddy"]
-position = Vector2(1248, -102)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound37"]
-position = Vector2(0, 5.75)
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(561, 515.75)
 shape = SubResource("RectangleShape2D_bun23")
 
-[node name="PropsRound10" type="StaticBody2D" parent="SortingDaddy"]
-position = Vector2(593, -127)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound10"]
-position = Vector2(0, 5)
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(-94, 490)
 shape = SubResource("RectangleShape2D_mnkyj")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(-105, 79)
+shape = SubResource("RectangleShape2D_ly4ka")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(-93, 141)
+shape = SubResource("RectangleShape2D_o7opi")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(-1018, 1238)
+shape = SubResource("RectangleShape2D_olhe2")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(-1088, 1238)
+shape = SubResource("RectangleShape2D_s3kwu")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(-896, 1238)
+shape = SubResource("RectangleShape2D_ybp5j")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(-927, 1294)
+shape = SubResource("RectangleShape2D_p6sh6")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(-993.5, 1294.5)
+shape = SubResource("RectangleShape2D_yktx5")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(-1064, 1294)
+shape = SubResource("RectangleShape2D_m21jb")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(-1360, 793)
+shape = SubResource("RectangleShape2D_fif40")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(-1360, 862.5)
+shape = SubResource("RectangleShape2D_6xgc5")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(-752.5, 581.5)
+shape = SubResource("RectangleShape2D_s3rcb")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(-879.5, 581.5)
+shape = SubResource("RectangleShape2D_wf24g")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(-947, 678.5)
+shape = SubResource("RectangleShape2D_8ios8")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(-816.5, 624.5)
+shape = SubResource("RectangleShape2D_s1hef")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(-663.5, 623.5)
+shape = SubResource("RectangleShape2D_msfih")
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(-1000.5, 406)
+shape = SubResource("RectangleShape2D_gyibe")
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(-1111.5, 404.5)
+shape = SubResource("RectangleShape2D_lksbi")
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(-1188, 279.5)
+shape = SubResource("RectangleShape2D_f43k2")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SortingDaddy/StaticBody2D"]
+polygon = PackedVector2Array(550, 471, 550, 483, 574, 483, 574, 473, 568, 480, 551, 482)
+
+[node name="PropsRound5" type="Sprite2D" parent="SortingDaddy"]
+position = Vector2(564, -484)
+texture = ExtResource("10_fvag4")
+offset = Vector2(0.5, 0.5)
+flip_h = true
+region_enabled = true
+region_rect = Rect2(216, 6, 23, 33)
+
+[node name="PropsRound6" type="Sprite2D" parent="SortingDaddy"]
+position = Vector2(556, -530)
+texture = ExtResource("10_fvag4")
+offset = Vector2(0, 0.5)
+region_enabled = true
+region_rect = Rect2(194, 21, 16, 17)
+
+[node name="PropsRound7" type="Sprite2D" parent="SortingDaddy"]
+position = Vector2(725, -501)
+texture = ExtResource("10_fvag4")
+offset = Vector2(0, 0.5)
+region_enabled = true
+region_rect = Rect2(194, 21, 16, 17)
+
+[node name="PropsRound8" type="Sprite2D" parent="SortingDaddy"]
+position = Vector2(694, -486)
+texture = ExtResource("10_fvag4")
+offset = Vector2(0.5, 0.5)
+region_enabled = true
+region_rect = Rect2(216, 6, 23, 33)
+
+[node name="PropsRound9" type="Sprite2D" parent="SortingDaddy"]
+position = Vector2(1153, -127)
+texture = ExtResource("10_fvag4")
+region_enabled = true
+region_rect = Rect2(10, 3, 30, 42)
+
+[node name="PropsRound37" type="Sprite2D" parent="SortingDaddy"]
+position = Vector2(1248, -102)
+texture = ExtResource("10_fvag4")
+region_enabled = true
+region_rect = Rect2(10, 3, 30, 42)
+
+[node name="PropsRound10" type="Sprite2D" parent="SortingDaddy"]
+position = Vector2(593, -127)
+texture = ExtResource("10_fvag4")
+region_enabled = true
+region_rect = Rect2(10, 3, 30, 42)
 
 [node name="PropsRound11" type="Sprite2D" parent="SortingDaddy"]
 position = Vector2(1206, -109)
@@ -1992,19 +2097,17 @@ texture = ExtResource("10_fvag4")
 region_enabled = true
 region_rect = Rect2(84, 85, 2, 5)
 
-[node name="PropsRound13" type="StaticBody2D" parent="SortingDaddy"]
+[node name="PropsRound13" type="Sprite2D" parent="SortingDaddy"]
 position = Vector2(582, -545)
+texture = ExtResource("10_fvag4")
+region_enabled = true
+region_rect = Rect2(46, 58, 14, 34)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound13"]
-position = Vector2(0, 12)
-shape = SubResource("RectangleShape2D_ly4ka")
-
-[node name="PropsRound4" type="StaticBody2D" parent="SortingDaddy"]
+[node name="PropsRound4" type="Sprite2D" parent="SortingDaddy"]
 position = Vector2(594, -483)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound4"]
-position = Vector2(0, 12)
-shape = SubResource("RectangleShape2D_o7opi")
+texture = ExtResource("10_fvag4")
+region_enabled = true
+region_rect = Rect2(2, 58, 14, 34)
 
 [node name="PropsRound14" type="Sprite2D" parent="SortingDaddy"]
 position = Vector2(-290, 591)
@@ -2013,47 +2116,42 @@ offset = Vector2(0.5, 0.5)
 region_enabled = true
 region_rect = Rect2(188, 55, 49, 37)
 
-[node name="PropsRound15" type="StaticBody2D" parent="SortingDaddy"]
+[node name="PropsRound15" type="Sprite2D" parent="SortingDaddy"]
 position = Vector2(-331, 614)
+texture = ExtResource("10_fvag4")
+region_enabled = true
+region_rect = Rect2(46, 58, 14, 34)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound15"]
-position = Vector2(0, 12)
-shape = SubResource("RectangleShape2D_olhe2")
-
-[node name="PropsRound16" type="StaticBody2D" parent="SortingDaddy"]
+[node name="PropsRound16" type="Sprite2D" parent="SortingDaddy"]
 position = Vector2(-401, 614)
+texture = ExtResource("10_fvag4")
+region_enabled = true
+region_rect = Rect2(46, 58, 14, 34)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound16"]
-position = Vector2(0, 12)
-shape = SubResource("RectangleShape2D_s3kwu")
-
-[node name="PropsRound17" type="StaticBody2D" parent="SortingDaddy"]
+[node name="PropsRound17" type="Sprite2D" parent="SortingDaddy"]
 position = Vector2(-209, 614)
+texture = ExtResource("10_fvag4")
+region_enabled = true
+region_rect = Rect2(46, 58, 14, 34)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound17"]
-position = Vector2(0, 12)
-shape = SubResource("RectangleShape2D_ybp5j")
-
-[node name="PropsRound18" type="StaticBody2D" parent="SortingDaddy"]
+[node name="PropsRound18" type="Sprite2D" parent="SortingDaddy"]
 position = Vector2(-240, 670)
+texture = ExtResource("10_fvag4")
+region_enabled = true
+region_rect = Rect2(2, 58, 14, 34)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound18"]
-position = Vector2(0, 12)
-shape = SubResource("RectangleShape2D_p6sh6")
-
-[node name="PropsRound19" type="StaticBody2D" parent="SortingDaddy"]
+[node name="PropsRound19" type="Sprite2D" parent="SortingDaddy"]
 position = Vector2(-307, 677)
+texture = ExtResource("10_fvag4")
+offset = Vector2(0.5, 0)
+region_enabled = true
+region_rect = Rect2(59, 13, 33, 18)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound19"]
-position = Vector2(0.5, 5.5)
-shape = SubResource("RectangleShape2D_yktx5")
-
-[node name="PropsRound20" type="StaticBody2D" parent="SortingDaddy"]
+[node name="PropsRound20" type="Sprite2D" parent="SortingDaddy"]
 position = Vector2(-377, 670)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound20"]
-position = Vector2(0, 12)
-shape = SubResource("RectangleShape2D_m21jb")
+texture = ExtResource("10_fvag4")
+region_enabled = true
+region_rect = Rect2(2, 58, 14, 34)
 
 [node name="PropsRound21" type="Sprite2D" parent="SortingDaddy"]
 position = Vector2(-248, 181)
@@ -2080,19 +2178,18 @@ offset = Vector2(0.5, 0.5)
 region_enabled = true
 region_rect = Rect2(134, 55, 49, 39)
 
-[node name="PropsRound23" type="StaticBody2D" parent="SortingDaddy"]
+[node name="PropsRound23" type="Sprite2D" parent="SortingDaddy"]
 position = Vector2(-673, 168)
+texture = ExtResource("10_fvag4")
+region_enabled = true
+region_rect = Rect2(24, 58, 14, 34)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound23"]
-position = Vector2(0, 13)
-shape = SubResource("RectangleShape2D_fif40")
-
-[node name="PropsRound24" type="StaticBody2D" parent="SortingDaddy"]
+[node name="PropsRound24" type="Sprite2D" parent="SortingDaddy"]
 position = Vector2(-674, 237)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound24"]
-position = Vector2(1, 13.5)
-shape = SubResource("RectangleShape2D_6xgc5")
+texture = ExtResource("10_fvag4")
+offset = Vector2(0.5, 0.5)
+region_enabled = true
+region_rect = Rect2(216, 6, 23, 33)
 
 [node name="PropsRound25" type="Sprite2D" parent="SortingDaddy"]
 position = Vector2(-33, -60)
@@ -2154,69 +2251,69 @@ metadata/_custom_type_script = "uid://da8ssm54bxa2b"
 position = Vector2(0, 28.25)
 shape = SubResource("RectangleShape2D_2tffn")
 
-[node name="PropsRound29" type="StaticBody2D" parent="SortingDaddy"]
+[node name="PropsRound29" type="Sprite2D" parent="SortingDaddy"]
 position = Vector2(-66, -36)
+texture = ExtResource("10_fvag4")
+offset = Vector2(0.5, 0)
+region_enabled = true
+region_rect = Rect2(59, 13, 33, 18)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound29"]
-position = Vector2(0.5, 5.5)
-shape = SubResource("RectangleShape2D_s3rcb")
-
-[node name="PropsRound30" type="StaticBody2D" parent="SortingDaddy"]
+[node name="PropsRound30" type="Sprite2D" parent="SortingDaddy"]
 position = Vector2(-193, -36)
+texture = ExtResource("10_fvag4")
+offset = Vector2(0.5, 0)
+region_enabled = true
+region_rect = Rect2(59, 13, 33, 18)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound30"]
-position = Vector2(0.5, 5.5)
-shape = SubResource("RectangleShape2D_wf24g")
-
-[node name="PropsRound31" type="StaticBody2D" parent="SortingDaddy"]
+[node name="PropsRound31" type="Sprite2D" parent="SortingDaddy"]
 position = Vector2(-261, 53)
+texture = ExtResource("10_fvag4")
+offset = Vector2(0.5, 0.5)
+region_enabled = true
+region_rect = Rect2(216, 6, 23, 33)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound31"]
-position = Vector2(1, 13.5)
-shape = SubResource("RectangleShape2D_8ios8")
-
-[node name="PropsRound32" type="StaticBody2D" parent="SortingDaddy"]
+[node name="PropsRound32" type="Sprite2D" parent="SortingDaddy"]
 position = Vector2(-130, 7)
+texture = ExtResource("10_fvag4")
+offset = Vector2(0.5, 0)
+region_enabled = true
+region_rect = Rect2(59, 13, 33, 18)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound32"]
-position = Vector2(0.5, 5.5)
-shape = SubResource("RectangleShape2D_s1hef")
-
-[node name="PropsRound33" type="StaticBody2D" parent="SortingDaddy"]
+[node name="PropsRound33" type="Sprite2D" parent="SortingDaddy"]
 position = Vector2(23, 6)
+texture = ExtResource("10_fvag4")
+offset = Vector2(0.5, 0)
+region_enabled = true
+region_rect = Rect2(59, 13, 33, 18)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound33"]
-position = Vector2(0.5, 5.5)
-shape = SubResource("RectangleShape2D_msfih")
-
-[node name="PropsRound34" type="StaticBody2D" parent="SortingDaddy"]
+[node name="PropsRound34" type="Sprite2D" parent="SortingDaddy"]
 position = Vector2(-314, -212)
+texture = ExtResource("10_fvag4")
+offset = Vector2(0.5, 0)
+region_enabled = true
+region_rect = Rect2(59, 13, 33, 18)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound34"]
-position = Vector2(0.5, 6)
-shape = SubResource("RectangleShape2D_gyibe")
-
-[node name="PropsRound35" type="StaticBody2D" parent="SortingDaddy"]
+[node name="PropsRound35" type="Sprite2D" parent="SortingDaddy"]
 position = Vector2(-425, -213)
+texture = ExtResource("10_fvag4")
+offset = Vector2(0.5, 0)
+region_enabled = true
+region_rect = Rect2(59, 13, 33, 18)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound35"]
-position = Vector2(0.5, 5.5)
-shape = SubResource("RectangleShape2D_lksbi")
-
-[node name="PropsRound36" type="StaticBody2D" parent="SortingDaddy"]
+[node name="PropsRound36" type="Sprite2D" parent="SortingDaddy"]
 position = Vector2(-501, -338)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/PropsRound36"]
-position = Vector2(0, 5.5)
-shape = SubResource("RectangleShape2D_f43k2")
+texture = ExtResource("10_fvag4")
+offset = Vector2(0, 0.5)
+region_enabled = true
+region_rect = Rect2(194, 21, 16, 17)
 
 [node name="Mafia" type="RigidBody2D" parent="SortingDaddy"]
 position = Vector2(-491, -303)
 script = ExtResource("10_kva58")
 timeline = ExtResource("11_f5c0m")
 directions = Array[Vector2]([Vector2(0, 40), Vector2(40, 0), Vector2(0, -40), Vector2(-30, -30)])
-distances = Array[int]([76, 239, 353, 100])
-timeExit = 240
+distances = Array[int]([150, 350, 600, 100])
+timeExit = 10
 metadata/_custom_type_script = "uid://da8ssm54bxa2b"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/Mafia"]
@@ -2329,13 +2426,22 @@ region_enabled = true
 region_rect = Rect2(60, 37, 20, 37)
 script = ExtResource("32_fif40")
 
-[node name="EssentialProps21" type="Sprite2D" parent="."]
+[node name="Interactable2" type="RigidBody2D" parent="."]
+position = Vector2(1253.16, -146.171)
+script = ExtResource("10_kva58")
+timeline = ExtResource("9_sjtuv")
+metadata/_custom_type_script = "uid://da8ssm54bxa2b"
+
+[node name="EssentialProps21" type="Sprite2D" parent="Interactable2"]
 z_index = -1
-position = Vector2(1247, -147)
+position = Vector2(-6.15686, -0.829315)
 texture = ExtResource("9_fv4w7")
 offset = Vector2(0.5, 0.5)
 region_enabled = true
 region_rect = Rect2(294, 23, 9, 7)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Interactable2"]
+polygon = PackedVector2Array(-16.16, 4.17101, -14.16, 15.171, 0.839966, 13.171)
 
 [node name="EssentialProps20" type="Sprite2D" parent="."]
 position = Vector2(1152, -91)
@@ -2445,3 +2551,5 @@ metadata/_custom_type_script = "uid://dt5wakac7oxio"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
 position = Vector2(-0.5, 2.75)
 shape = SubResource("RectangleShape2D_kva58")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

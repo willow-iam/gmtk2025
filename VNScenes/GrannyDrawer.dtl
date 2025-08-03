@@ -1,7 +1,9 @@
+if {inventory.handcuffs} == true:
+	There was an invitation and a pair of handcuffs in here. They're mine now.
+	return
 [text_input text="Locked with a 4 digit code." var="Answer"]
 if {Answer} == "9040":
 	It looks like some kind of invitation and a pair of handcuffs. I'll take them.
 	set {inventory.handcuffs} = true
-	[signal arg="unlock"]
 else:
 	Nope, that's not it.

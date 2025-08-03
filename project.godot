@@ -123,6 +123,10 @@ layout/style_list=["res://New_File.tres"]
 layout/default_style="res://New_File.tres"
 glossary/default_case_sensitive=true
 
+[display]
+
+window/stretch/mode="viewport"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"
