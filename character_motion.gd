@@ -10,14 +10,17 @@ func _ready():
 
 func _process(_delta):
 	var velocity = global_position - prev_pos
+	var animation = ""
 	if velocity == Vector2.ZERO:
-		anim_player.play(prefix_name+"IdleDown")
+		animation=(prefix_name+"IdleDown")
 	else:
 		var math_dir = roundi(2*atan2(velocity.y,velocity.x)/PI)%4
 		match math_dir:
-			0:anim_player.play(prefix_name+"Right")
-			1:anim_player.play(prefix_name+"Down")
-			2:anim_player.play(prefix_name+"Left")
-			-2:anim_player.play(prefix_name+"Left")
-			-1:anim_player.play(prefix_name+"Up")
+			0:animation=(prefix_name+"Right")
+			1:animation=(prefix_name+"Down")
+			2:animation=(prefix_name+"Left")
+			-2:animation=(prefix_name+"Left")
+			-1:animation=(prefix_name+"Up")
+	if anim_player.has_animation(animation):
+		anim_player.play(animation)
 	prev_pos = global_position
