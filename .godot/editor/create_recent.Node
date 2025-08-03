@@ -1,6 +1,6 @@
+Interactable
 CollisionShape2D
 Area2D
-Interactable
 Button
 Container
 TextureRect

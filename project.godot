@@ -14,6 +14,7 @@ config/name="gmtk2025"
 run/main_scene="uid://by1r3tu3ocojv"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+run/stretch/mode="disabled"
 
 [autoload]
 

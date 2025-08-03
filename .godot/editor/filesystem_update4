@@ -20,3 +20,5 @@ res://player.gd
 res://VNScenes/UseCuffs.dtl
 res://VNScenes/ChiefStation.dtl
 res://doorway.gd
+res://VNScenes/ChiefSaysNo.dtl
+res://character_motion.gd

@@ -12,4 +12,4 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if has_overlapping_bodies():
 		var that = get_overlapping_bodies()[0]
-		that.position = destination
+		that.global_position = destination

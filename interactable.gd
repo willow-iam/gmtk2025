@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends AnimatableBody2D
 class_name Interactable
 @export var timeline : DialogicTimeline
 @export var directions : Array[Vector2]
@@ -11,6 +11,7 @@ func _ready() -> void:
 	assert(len(distances)==len(directions))
 	if len(distances)>0:
 		dist_left=distances[0]
+	sync_to_physics=false
 	#gravity_scale=0
 	#lock_rotation=true
 
