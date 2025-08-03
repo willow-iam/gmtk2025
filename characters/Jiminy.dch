@@ -6,7 +6,7 @@
 &"custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
-"style": ""
+"style": "Style1"
 },
 &"default_portrait": "Default",
 &"description": "",
@@ -20,8 +20,8 @@
 "image": "\"res://characters/Portraits/characters/5.png\""
 },
 "mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
+"offset": Vector2(0, -153),
+"scale": 2.0,
 "scene": ""
 },
 "Default": {
@@ -29,8 +29,8 @@
 "image": "\"res://characters/Portraits/characters/0.png\""
 },
 "mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
+"offset": Vector2(0, -153),
+"scale": 2.0,
 "scene": ""
 },
 "Look": {
@@ -38,8 +38,8 @@
 "image": "\"res://characters/Portraits/characters/2.png\""
 },
 "mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
+"offset": Vector2(0, -153),
+"scale": 2.0,
 "scene": ""
 },
 "Pensive": {
@@ -47,8 +47,8 @@
 "image": "\"res://characters/Portraits/characters/3.png\""
 },
 "mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
+"offset": Vector2(0, -153),
+"scale": 2.0,
 "scene": ""
 },
 "Sigh": {
@@ -56,8 +56,8 @@
 "image": "\"res://characters/Portraits/characters/4.png\""
 },
 "mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
+"offset": Vector2(0, -153),
+"scale": 2.0,
 "scene": ""
 },
 "Sus": {
@@ -65,8 +65,8 @@
 "image": "\"res://characters/Portraits/characters/1.png\""
 },
 "mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
+"offset": Vector2(0, -153),
+"scale": 2.0,
 "scene": ""
 },
 "Sweat": {
@@ -74,8 +74,8 @@
 "image": "\"res://characters/Portraits/characters/6.png\""
 },
 "mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
+"offset": Vector2(0, -153),
+"scale": 2.0,
 "scene": ""
 }
 },

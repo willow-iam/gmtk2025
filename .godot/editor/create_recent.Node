@@ -1,5 +1,9 @@
 CollisionShape2D
+AnimationPlayer
+AnimationTree
 Interactable
+Node2D
+Node
 Doorway
 CollisionPolygon2D
 Sprite2D

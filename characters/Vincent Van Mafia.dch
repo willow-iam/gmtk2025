@@ -6,7 +6,7 @@
 &"custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
-"style": ""
+"style": "Style1"
 },
 &"default_portrait": "Default",
 &"description": "",
@@ -20,8 +20,8 @@
 "image": "\"res://characters/Portraits/characters/15.png\""
 },
 "mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
+"offset": Vector2(0, -153),
+"scale": 2.0,
 "scene": ""
 }
 },

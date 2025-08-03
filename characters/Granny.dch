@@ -6,7 +6,7 @@
 &"custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
-"style": ""
+"style": "Style1"
 },
 &"default_portrait": "Default",
 &"description": "",
@@ -20,18 +20,18 @@
 "image": "\"res://characters/Portraits/characters/21.png\""
 },
 "mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
+"offset": Vector2(0, -153),
+"scale": 2.0,
 "scene": ""
 },
 "Default": {
 "export_overrides": {
 "image": "\"res://characters/Portraits/characters/16.png\""
 },
-"ignore_char_scale": true,
+"ignore_char_scale": false,
 "mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
+"offset": Vector2(0, -153),
+"scale": 2.0,
 "scene": ""
 },
 "Discontent": {
@@ -39,8 +39,8 @@
 "image": "\"res://characters/Portraits/characters/18.png\""
 },
 "mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
+"offset": Vector2(0, -153),
+"scale": 2.0,
 "scene": ""
 },
 "Happy": {
@@ -48,8 +48,8 @@
 "image": "\"res://characters/Portraits/characters/17.png\""
 },
 "mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
+"offset": Vector2(0, -153),
+"scale": 2.0,
 "scene": ""
 },
 "Look": {
@@ -57,17 +57,17 @@
 "image": "\"res://characters/Portraits/characters/GrannyLookFixed.png\""
 },
 "mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
+"offset": Vector2(0, -153),
+"scale": 2.0,
 "scene": ""
 },
 "Sigh": {
 "export_overrides": {
-"image": "\"res://characters/Portraits/characters/19.png\""
+"image": "\"res://characters/Portraits/characters/20.png\""
 },
 "mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
+"offset": Vector2(0, -153),
+"scale": 2.0,
 "scene": ""
 }
 },
