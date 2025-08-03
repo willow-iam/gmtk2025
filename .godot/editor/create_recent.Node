@@ -5,6 +5,7 @@ VBoxContainer
 AudioStreamPlayer
 CollisionShape2D
 Interactable
+AudioStreamPlayer
 CollisionPolygon2D
 StaticBody2D
 Sprite2D

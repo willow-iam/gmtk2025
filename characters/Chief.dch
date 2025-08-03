@@ -5,7 +5,18 @@
 &"color": Color(1, 1, 1, 1),
 &"custom_info": {
 "sound_mood_default": "",
-"sound_moods": {},
+"sound_moods": {
+"Mood 1": {
+"mode": 0,
+"name": "Mood 1",
+"pitch_base": 1.0,
+"pitch_variance": 0.0,
+"skip_characters": 0.0,
+"sound_path": "Chief.wav",
+"volume_base": 15.0,
+"volume_variance": 0.0
+}
+},
 "style": "New_File"
 },
 &"default_portrait": "Default",
@@ -23,7 +34,8 @@
 "mirror": false,
 "offset": Vector2(0, -153),
 "scale": 2.0,
-"scene": ""
+"scene": "",
+"sound_mood": "Mood 1"
 },
 "Default": {
 "export_overrides": {
@@ -32,7 +44,8 @@
 "mirror": false,
 "offset": Vector2(0, -153),
 "scale": 2.0,
-"scene": ""
+"scene": "",
+"sound_mood": "Mood 1"
 },
 "EyesClosed": {
 "export_overrides": {
@@ -41,7 +54,8 @@
 "mirror": false,
 "offset": Vector2(0, -153),
 "scale": 2.0,
-"scene": ""
+"scene": "",
+"sound_mood": "Mood 1"
 },
 "Sigh": {
 "export_overrides": {
@@ -50,7 +64,8 @@
 "mirror": false,
 "offset": Vector2(0, -153),
 "scale": 2.0,
-"scene": ""
+"scene": "",
+"sound_mood": "Mood 1"
 },
 "SweatLeft": {
 "export_overrides": {
@@ -59,7 +74,8 @@
 "mirror": false,
 "offset": Vector2(0, -153),
 "scale": 2.0,
-"scene": ""
+"scene": "",
+"sound_mood": "Mood 1"
 },
 "SweatRight": {
 "export_overrides": {
@@ -68,7 +84,8 @@
 "mirror": false,
 "offset": Vector2(0, -153),
 "scale": 2.0,
-"scene": ""
+"scene": "",
+"sound_mood": "Mood 1"
 },
 "Yell": {
 "export_overrides": {
@@ -77,7 +94,8 @@
 "mirror": false,
 "offset": Vector2(0, -153),
 "scale": 2.0,
-"scene": ""
+"scene": "",
+"sound_mood": "Mood 1"
 }
 },
 &"scale": 1.0
