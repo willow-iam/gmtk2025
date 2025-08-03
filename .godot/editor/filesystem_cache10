@@ -645,7 +645,8 @@ THIRDPARTY.md::TextFile/TextFile::-1::1754181362::0::1::::<><><>0<>0<><>::
 emily game.mp3::AudioStreamMP3::5127893310170545289::1754214313::1754214317::1::::<><><>0<>0<>b41ac133b9153a52d3d829f50ad7e9bc<>res://.godot/imported/emily game.mp3-3e6a6d25eb31ac474b54f3392f40f762.mp3str::
 Loop.wav::AudioStreamWAV::5084922069074142004::1754214313::1754214317::1::::<><><>0<>0<>e5a2f088bc5bc3947374a8db6cf6db5c<>res://.godot/imported/Loop.wav-e6f480d0045ed580992f28b2227754c7.sample::
 Noon.wav::AudioStreamWAV::5217582848011752557::1754214313::1754214317::1::::<><><>0<>0<>51a5f3a85df5e5fd544f02c0fda4c7d1<>res://.godot/imported/Noon.wav-1b3d61d267150a067eac8f5e658ad301.sample::
-::res://characters/::1754216546
+::res://characters/::1754216781
+bg.png::CompressedTexture2D::1817531244923155575::1754216780::1754216781::1::::<><><>0<>0<>48ce723120cd76bc7c1814964f3ca7c7<>res://.godot/imported/bg.png-bcb19fdcd817f5a1743571e77c848465.ctex::
 Characters.png::CompressedTexture2D/CompressedTexture2D::7635959586527028896::1754181362::1754181432::1::::<><><>0<>0<>db3e853f5995be34de418b84d3b94505<>res://.godot/imported/Characters.png-2d0e56b20d74b4453eaa76d0fca55723.ctex::
 CharactersFINAL.png::CompressedTexture2D::2752650764448617221::1754193639::1754193639::1::::<><><>0<>0<>5a70fea1b0e54f6abefac1d13f13e1f8<>res://.godot/imported/CharactersFINAL.png-3db078c91153c1a6bd62e3fecc8be02b.ctex::
 CharSprites.png::CompressedTexture2D/CompressedTexture2D::8546065751358610512::1754181362::1754181432::1::::<><><>0<>0<>b6bcb708ce761a796c98fbe2288478b5<>res://.godot/imported/CharSprites.png-7c7533305d5e9a54ae9408d73af28c6d.ctex::
@@ -734,8 +735,9 @@ tile026.png::CompressedTexture2D/CompressedTexture2D::870286497912994562::175418
 tile027.png::CompressedTexture2D/CompressedTexture2D::4400016276546869540::1754181362::1754181432::1::::<><><>0<>0<>2ba38be2098188521529fea2f8e5dfce<>res://.godot/imported/tile027.png-973fd1d2342d8afeac2dd694ec8b78e3.ctex::
 tile028.png::CompressedTexture2D/CompressedTexture2D::8203278626299143061::1754181362::1754181432::1::::<><><>0<>0<>20ecea0a356dbc37e29010358aef0a3d<>res://.godot/imported/tile028.png-43a475738c0a691a97db5eaf429c9ab1.ctex::
 tile029.png::CompressedTexture2D/CompressedTexture2D::8048537067682952121::1754181362::1754181432::1::::<><><>0<>0<>fbff24421ca7aa34289a20888f8e6165<>res://.godot/imported/tile029.png-9412a36c78a9d708a2eb5052cb7cdb55.ctex::
-::res://tilesets/::1754181432
+::res://tilesets/::1754216795
 BaseTiles.png::CompressedTexture2D/CompressedTexture2D::7553277832439521240::1754181362::1754181432::1::::<><><>0<>0<>a5fcb943afea144fba18ec3b1545074e<>res://.godot/imported/BaseTiles.png-0dc6777090341a5b1b80d600659780ad.ctex::
+bg.png::CompressedTexture2D::7728348790709272245::1754216795::1754216795::1::::<><><>0<>0<>10f42852b78359ba202eef862e2da8f6<>res://.godot/imported/bg.png-5acfe979c9a18c1b8035fc6a98db11a5.ctex::
 Engl-Space Station Tileset.png::CompressedTexture2D/CompressedTexture2D::4763673217766867418::1754181362::1754181432::1::::<><><>0<>0<>f4e39b8f0844bd4f37180c62e79f8c81<>res://.godot/imported/Engl-Space Station Tileset.png-137ad55e89563cedf6354c20368a16d3.ctex::
 ::res://tilesets/Art by Sophie Bosak/::1754181362
 ::res://tilesets/Art by Sophie Bosak/AnimatedProps/::1754181432
