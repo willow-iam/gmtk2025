@@ -9,3 +9,4 @@ Chief (Default): If it really was a murder, there's no way you can catch the cul
 Chief (EyesClosed): I've got a conference to attend to in the Centauri system, so I couldn't help you even if I wanted to. Which I don't.
 Chief (Default): My boys will be here to collect the body tonight.
 [signal arg="bg music"]
+[music fade="0.0" volume="0.0"]

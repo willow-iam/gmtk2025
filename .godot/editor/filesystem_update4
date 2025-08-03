@@ -6,3 +6,5 @@ res://characters/Chief.dch
 res://VNScenes/Intro.dtl
 res://game_clock.tscn
 res://GameClock.gd
+res://MainMenu.tscn
+res://button.gd

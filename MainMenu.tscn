@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://by1r3tu3ocojv"]
+
+[ext_resource type="Texture2D" uid="uid://c2uuydcnm25ug" path="res://characters/ph_cabinet.jpeg" id="1_i26rj"]
+[ext_resource type="Script" uid="uid://cfc3g2p5of35q" path="res://button.gd" id="2_eiy7p"]
+
+[sub_resource type="Theme" id="Theme_eiy7p"]
+default_font_size = 60
+
+[node name="MainMenu" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_i26rj")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme = SubResource("Theme_eiy7p")
+text = "Begin Game"
+script = ExtResource("2_eiy7p")
