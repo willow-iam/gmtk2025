@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://by1r3tu3ocojv"]
+[gd_scene load_steps=6 format=3 uid="uid://b875ncb0we2k6"]
 
-[ext_resource type="Texture2D" uid="uid://c2uuydcnm25ug" path="res://characters/ph_cabinet.jpeg" id="1_i26rj"]
-[ext_resource type="Script" uid="uid://cfc3g2p5of35q" path="res://button.gd" id="2_eiy7p"]
+[ext_resource type="Texture2D" uid="uid://da2w6arsbk4sw" path="res://characters/PropsRound3.png" id="1_eiy7p"]
+[ext_resource type="Texture2D" uid="uid://dl8hicu55nclx" path="res://tilesets/Art by Sophie Bosak/New Piskel(8).png" id="1_h7a2f"]
+[ext_resource type="Script" path="res://button.gd" id="2_eiy7p"]
+
+[sub_resource type="Theme" id="Theme_qoqlk"]
 
 [sub_resource type="Theme" id="Theme_eiy7p"]
 default_font_size = 60
@@ -12,11 +15,22 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.945288, 1.01129)
+theme = SubResource("Theme_qoqlk")
 
 [node name="Logo" type="TextureRect" parent="."]
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("1_i26rj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Logo"]
+position = Vector2(602.991, 220.511)
+scale = Vector2(8.48693, 3.1129)
+texture = ExtResource("1_h7a2f")
+
+[node name="Sprite2D" type="Sprite2D" parent="Logo"]
+position = Vector2(642.133, 108.772)
+scale = Vector2(3.1129, 3.1129)
+texture = ExtResource("1_eiy7p")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 2
