@@ -1,4 +1,4 @@
-[gd_scene load_steps=122 format=4 uid="uid://d4la14pmewfip"]
+[gd_scene load_steps=124 format=4 uid="uid://d4la14pmewfip"]
 
 [ext_resource type="Script" uid="uid://6s0pko1dyx11" path="res://world.gd" id="1_bah7m"]
 [ext_resource type="Texture2D" uid="uid://dfu4m888ro681" path="res://tilesets/BaseTiles.png" id="2_bah7m"]
@@ -25,16 +25,16 @@
 [ext_resource type="Resource" uid="uid://c8ikr6j2853xg" path="res://VNScenes/Mayor.dtl" id="16_6w02q"]
 [ext_resource type="Resource" uid="uid://b0olasudsm28j" path="res://VNScenes/EarlyClock.dtl" id="17_aj1ai"]
 [ext_resource type="Resource" uid="uid://dhhpixqr2fnso" path="res://VNScenes/Bush.dtl" id="18_5j71u"]
-[ext_resource type="Resource" uid="uid://cdruk0ly3fl6r" path="res://VNScenes/WallOfGuns.dtl" id="21_6xgc5"]
+[ext_resource type="Resource" path="res://VNScenes/WallOfGuns.dtl" id="21_6xgc5"]
 [ext_resource type="Texture2D" uid="uid://didw1moth1yqv" path="res://tilesets/bg.png" id="21_fsfaj"]
 [ext_resource type="Resource" uid="uid://onwn7rk0fpqa" path="res://JJilikersPlaque.dtl" id="22_bun23"]
 [ext_resource type="Resource" uid="uid://x6s4woyuvif0" path="res://GrannyJilikersPlaque.dtl" id="23_gtthi"]
 [ext_resource type="Resource" uid="uid://cvfpmop18cqsr" path="res://PolicePlaque.dtl" id="24_mnkyj"]
 [ext_resource type="Resource" uid="uid://b81m68oyjh8al" path="res://VNScenes/ChiefOffice.dtl" id="25_d7dfr"]
 [ext_resource type="Resource" uid="uid://b1pxks84xjw6q" path="res://MayorPlaque.dtl" id="25_fif40"]
-[ext_resource type="Script" path="res://character_motion.gd" id="27_mnkyj"]
+[ext_resource type="Script" uid="uid://c2iy0jn7fno1d" path="res://character_motion.gd" id="27_mnkyj"]
 [ext_resource type="Texture2D" uid="uid://bfhn0x32libuj" path="res://characters/CharactersFINAL.png" id="28_gtthi"]
-[ext_resource type="Script" path="res://intro_chief.gd" id="32_fif40"]
+[ext_resource type="Resource" uid="uid://oi000b216g03" path="res://VNScenes/Backpack.dtl" id="33_fsfaj"]
 [ext_resource type="Texture2D" uid="uid://da2w6arsbk4sw" path="res://characters/PropsRound3.png" id="36_yktx5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fvag4"]
@@ -942,13 +942,14 @@ _data = {
 &"RESET": SubResource("Animation_gtthi")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcbcq"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_fsfaj"]
+radius = 16.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ydbc3"]
 size = Vector2(57, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3ffs"]
-size = Vector2(77, 17)
+size = Vector2(50.5, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gtthi"]
 size = Vector2(32, 20)
@@ -1054,6 +1055,9 @@ size = Vector2(16, 7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrxlq"]
 size = Vector2(40, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdxe7"]
+size = Vector2(25.6743, 7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7470a"]
 size = Vector2(36, 20)
@@ -1418,6 +1422,9 @@ _data = {
 &"RESET": SubResource("Animation_7470a")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4y68"]
+size = Vector2(26.16, 6)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kva58"]
 size = Vector2(29, 2)
 
@@ -1441,7 +1448,7 @@ y_sort_enabled = true
 [node name="Jiminy" type="CharacterBody2D" parent="SortingDaddy"]
 z_as_relative = false
 y_sort_enabled = true
-position = Vector2(1215, -127)
+position = Vector2(1215, -134)
 motion_mode = 1
 floor_stop_on_slope = false
 script = ExtResource("2_bcbcq")
@@ -1491,13 +1498,11 @@ libraries = {
 &"": SubResource("AnimationLibrary_mnkyj")
 }
 
-[node name="InteractRange" type="ShapeCast2D" parent="SortingDaddy/Jiminy"]
-position = Vector2(1, 0)
-rotation = 0.785398
-scale = Vector2(1.5, 1.5)
-shape = SubResource("RectangleShape2D_bcbcq")
-target_position = Vector2(0, 0)
-max_results = 2
+[node name="InteractRange" type="Area2D" parent="SortingDaddy/Jiminy"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/Jiminy/InteractRange"]
+position = Vector2(2, 11)
+shape = SubResource("CircleShape2D_fsfaj")
 
 [node name="EssentialProps" type="Sprite2D" parent="SortingDaddy"]
 y_sort_enabled = true
@@ -1507,7 +1512,7 @@ offset = Vector2(0.5, 0.5)
 region_enabled = true
 region_rect = Rect2(296, 73, 57, 27)
 
-[node name="Interactable" type="RigidBody2D" parent="SortingDaddy/EssentialProps"]
+[node name="Interactable" type="StaticBody2D" parent="SortingDaddy/EssentialProps"]
 script = ExtResource("10_kva58")
 timeline = ExtResource("9_jyqkj")
 metadata/_custom_type_script = "uid://da8ssm54bxa2b"
@@ -1533,12 +1538,13 @@ offset = Vector2(0, 0.5)
 region_enabled = true
 region_rect = Rect2(256, 62, 24, 21)
 
-[node name="Interactable" type="RigidBody2D" parent="SortingDaddy/EssentialProps4"]
+[node name="Interactable" type="StaticBody2D" parent="SortingDaddy/EssentialProps4"]
 script = ExtResource("10_kva58")
 timeline = ExtResource("10_cvq6i")
 metadata/_custom_type_script = "uid://da8ssm54bxa2b"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/EssentialProps4/Interactable"]
+position = Vector2(13.25, 0)
 shape = SubResource("RectangleShape2D_i3ffs")
 
 [node name="EssentialProps5" type="Sprite2D" parent="SortingDaddy"]
@@ -1550,7 +1556,7 @@ offset = Vector2(1.04, 0.02)
 region_enabled = true
 region_rect = Rect2(147, 1, 32, 49)
 
-[node name="Interactable" type="RigidBody2D" parent="SortingDaddy/EssentialProps5"]
+[node name="Interactable" type="StaticBody2D" parent="SortingDaddy/EssentialProps5"]
 script = ExtResource("10_kva58")
 timeline = ExtResource("12_d7dfr")
 metadata/_custom_type_script = "uid://da8ssm54bxa2b"
@@ -1568,7 +1574,7 @@ offset = Vector2(1, 0)
 region_enabled = true
 region_rect = Rect2(192, 0, 32, 48)
 
-[node name="Interactable" type="RigidBody2D" parent="SortingDaddy/EssentialProps6"]
+[node name="Interactable" type="StaticBody2D" parent="SortingDaddy/EssentialProps6"]
 position = Vector2(18, 44)
 script = ExtResource("10_kva58")
 timeline = ExtResource("12_ydbc3")
@@ -1641,7 +1647,7 @@ offset = Vector2(1, 0)
 region_enabled = true
 region_rect = Rect2(240, 0, 32, 48)
 
-[node name="Interactable" type="RigidBody2D" parent="SortingDaddy/EssentialProps11"]
+[node name="Interactable" type="StaticBody2D" parent="SortingDaddy/EssentialProps11"]
 script = ExtResource("10_kva58")
 timeline = ExtResource("11_6tx0c")
 metadata/_custom_type_script = "uid://da8ssm54bxa2b"
@@ -1730,11 +1736,10 @@ texture = ExtResource("9_fv4w7")
 region_enabled = true
 region_rect = Rect2(282, 5, 34, 11)
 
-[node name="Interactable" type="RigidBody2D" parent="SortingDaddy/EssentialProps18"]
+[node name="Interactable" type="StaticBody2D" parent="SortingDaddy/EssentialProps18"]
+position = Vector2(0, -2)
 script = ExtResource("10_kva58")
 timeline = ExtResource("9_b2ar6")
-directions = Array[Vector2]([Vector2(0, 5)])
-distances = Array[int]([100])
 metadata/_custom_type_script = "uid://da8ssm54bxa2b"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/EssentialProps18/Interactable"]
@@ -1749,7 +1754,7 @@ offset = Vector2(0.5, 0)
 region_enabled = true
 region_rect = Rect2(288, 41, 29, 24)
 
-[node name="Interactable" type="RigidBody2D" parent="SortingDaddy/EssentialProps22"]
+[node name="Interactable" type="StaticBody2D" parent="SortingDaddy/EssentialProps22"]
 script = ExtResource("10_kva58")
 timeline = ExtResource("10_1fphk")
 metadata/_custom_type_script = "uid://da8ssm54bxa2b"
@@ -1780,7 +1785,7 @@ offset = Vector2(0.5, 0.5)
 region_enabled = true
 region_rect = Rect2(11, 84, 25, 69)
 
-[node name="Interactable" type="RigidBody2D" parent="SortingDaddy/EssentialProps23"]
+[node name="Interactable" type="StaticBody2D" parent="SortingDaddy/EssentialProps23"]
 script = ExtResource("10_kva58")
 timeline = ExtResource("17_aj1ai")
 metadata/_custom_type_script = "uid://da8ssm54bxa2b"
@@ -1810,7 +1815,7 @@ offset = Vector2(0.5, 0.5)
 region_enabled = true
 region_rect = Rect2(100, 44, 23, 31)
 
-[node name="Interactable" type="RigidBody2D" parent="SortingDaddy"]
+[node name="Interactable" type="StaticBody2D" parent="SortingDaddy"]
 position = Vector2(500, -960)
 script = ExtResource("10_kva58")
 timeline = ExtResource("15_0to5b")
@@ -1965,9 +1970,10 @@ offset = Vector2(0.5, 0)
 region_enabled = true
 region_rect = Rect2(104, 7, 77, 42)
 
-[node name="MayorPapers" type="RigidBody2D" parent="SortingDaddy/PropsRound2"]
+[node name="MayorPapers" type="StaticBody2D" parent="SortingDaddy/PropsRound2"]
 position = Vector2(-6, -29)
 script = ExtResource("10_kva58")
+timeline = ExtResource("16_6w02q")
 metadata/_custom_type_script = "uid://da8ssm54bxa2b"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SortingDaddy/PropsRound2/MayorPapers"]
@@ -2084,9 +2090,6 @@ shape = SubResource("RectangleShape2D_lksbi")
 position = Vector2(-1188, 279.5)
 shape = SubResource("RectangleShape2D_f43k2")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SortingDaddy/StaticBody2D"]
-polygon = PackedVector2Array(550, 471, 550, 483, 574, 483, 574, 473, 568, 480, 551, 482)
-
 [node name="CollisionShape2D27" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D"]
 position = Vector2(-1078, 69)
 shape = SubResource("RectangleShape2D_nrxlq")
@@ -2128,6 +2131,13 @@ texture = ExtResource("21_fsfaj")
 position = Vector2(-1940, 771)
 texture = ExtResource("21_fsfaj")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="SortingDaddy/StaticBody2D"]
+position = Vector2(560.326, 483.629)
+
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="SortingDaddy/StaticBody2D/StaticBody2D"]
+position = Vector2(2.83716, -3.12949)
+shape = SubResource("RectangleShape2D_bdxe7")
+
 [node name="PropsRound5" type="Sprite2D" parent="SortingDaddy"]
 position = Vector2(564, -484)
 texture = ExtResource("10_fvag4")
@@ -2136,7 +2146,7 @@ flip_h = true
 region_enabled = true
 region_rect = Rect2(216, 6, 23, 33)
 
-[node name="Interactable2" type="RigidBody2D" parent="SortingDaddy"]
+[node name="Interactable2" type="StaticBody2D" parent="SortingDaddy"]
 position = Vector2(618, -152)
 script = ExtResource("10_kva58")
 timeline = ExtResource("21_6xgc5")
@@ -2261,8 +2271,7 @@ offset = Vector2(0.5, 0)
 region_enabled = true
 region_rect = Rect2(59, 13, 33, 18)
 
-[node name="Interactable" type="RigidBody2D" parent="SortingDaddy/PropsRound21"]
-gravity_scale = 0.0
+[node name="Interactable" type="StaticBody2D" parent="SortingDaddy/PropsRound21"]
 script = ExtResource("10_kva58")
 timeline = ExtResource("18_5j71u")
 metadata/_custom_type_script = "uid://da8ssm54bxa2b"
@@ -2298,7 +2307,7 @@ texture = ExtResource("10_fvag4")
 region_enabled = true
 region_rect = Rect2(67, 64, 16, 11)
 
-[node name="Interactable" type="RigidBody2D" parent="SortingDaddy/PropsRound25"]
+[node name="Interactable" type="StaticBody2D" parent="SortingDaddy/PropsRound25"]
 script = ExtResource("10_kva58")
 timeline = ExtResource("22_bun23")
 metadata/_custom_type_script = "uid://da8ssm54bxa2b"
@@ -2313,7 +2322,7 @@ texture = ExtResource("10_fvag4")
 region_enabled = true
 region_rect = Rect2(67, 64, 16, 11)
 
-[node name="Interactable" type="RigidBody2D" parent="SortingDaddy/PropsRound26"]
+[node name="Interactable" type="StaticBody2D" parent="SortingDaddy/PropsRound26"]
 script = ExtResource("10_kva58")
 timeline = ExtResource("23_gtthi")
 metadata/_custom_type_script = "uid://da8ssm54bxa2b"
@@ -2328,7 +2337,7 @@ texture = ExtResource("10_fvag4")
 region_enabled = true
 region_rect = Rect2(67, 64, 16, 11)
 
-[node name="Interactable" type="RigidBody2D" parent="SortingDaddy/PropsRound27"]
+[node name="Interactable" type="StaticBody2D" parent="SortingDaddy/PropsRound27"]
 script = ExtResource("10_kva58")
 timeline = ExtResource("24_mnkyj")
 metadata/_custom_type_script = "uid://da8ssm54bxa2b"
@@ -2343,7 +2352,7 @@ texture = ExtResource("10_fvag4")
 region_enabled = true
 region_rect = Rect2(67, 64, 16, 11)
 
-[node name="Interactable" type="RigidBody2D" parent="SortingDaddy/PropsRound28"]
+[node name="Interactable" type="StaticBody2D" parent="SortingDaddy/PropsRound28"]
 script = ExtResource("10_kva58")
 timeline = ExtResource("25_fif40")
 metadata/_custom_type_script = "uid://da8ssm54bxa2b"
@@ -2408,13 +2417,13 @@ offset = Vector2(0, 0.5)
 region_enabled = true
 region_rect = Rect2(194, 21, 16, 17)
 
-[node name="Mafia" type="RigidBody2D" parent="SortingDaddy"]
+[node name="Mafia" type="StaticBody2D" parent="SortingDaddy"]
 position = Vector2(-491, -303)
 script = ExtResource("10_kva58")
 timeline = ExtResource("11_f5c0m")
 directions = Array[Vector2]([Vector2(0, 40), Vector2(40, 0), Vector2(0, -40), Vector2(-30, -30)])
 distances = Array[int]([150, 350, 600, 100])
-timeExit = 10
+timeExit = 240
 metadata/_custom_type_script = "uid://da8ssm54bxa2b"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/Mafia"]
@@ -2427,6 +2436,7 @@ texture = ExtResource("12_f5c0m")
 hframes = 12
 vframes = 5
 frame = 36
+script = ExtResource("27_mnkyj")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SortingDaddy/Mafia/Sprite2D"]
 root_node = NodePath("../..")
@@ -2434,7 +2444,7 @@ libraries = {
 &"": SubResource("AnimationLibrary_lksbi")
 }
 
-[node name="Granny" type="RigidBody2D" parent="SortingDaddy"]
+[node name="Granny" type="StaticBody2D" parent="SortingDaddy"]
 position = Vector2(636, -144)
 script = ExtResource("10_kva58")
 timeline = ExtResource("12_ee7l0")
@@ -2464,7 +2474,7 @@ libraries = {
 &"": SubResource("AnimationLibrary_m21jb")
 }
 
-[node name="Mayor" type="RigidBody2D" parent="SortingDaddy"]
+[node name="Mayor" type="StaticBody2D" parent="SortingDaddy"]
 position = Vector2(635, -539)
 script = ExtResource("10_kva58")
 timeline = ExtResource("16_6w02q")
@@ -2492,7 +2502,7 @@ libraries = {
 &"": SubResource("AnimationLibrary_ataof")
 }
 
-[node name="Chief" type="RigidBody2D" parent="SortingDaddy"]
+[node name="Chief" type="StaticBody2D" parent="SortingDaddy"]
 position = Vector2(-240, 654)
 script = ExtResource("10_kva58")
 timeline = ExtResource("25_d7dfr")
@@ -2520,14 +2530,36 @@ libraries = {
 &"": SubResource("AnimationLibrary_3chcu")
 }
 
-[node name="IntroChief" type="Sprite2D" parent="SortingDaddy"]
+[node name="Chief2" type="StaticBody2D" parent="SortingDaddy"]
 position = Vector2(1202, -102)
-texture = ExtResource("28_gtthi")
-region_enabled = true
-region_rect = Rect2(60, 37, 20, 37)
-script = ExtResource("32_fif40")
+script = ExtResource("10_kva58")
+timeline = ExtResource("33_fsfaj")
+directions = Array[Vector2]([Vector2(0, 60)])
+distances = Array[int]([99999])
+metadata/_custom_type_script = "uid://da8ssm54bxa2b"
 
-[node name="Interactable2" type="RigidBody2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SortingDaddy/Chief2"]
+position = Vector2(-4, -18)
+shape = SubResource("RectangleShape2D_b2ar6")
+
+[node name="Sprite2D" type="Sprite2D" parent="SortingDaddy/Chief2"]
+position = Vector2(-5, -30)
+texture = ExtResource("28_gtthi")
+hframes = 12
+vframes = 5
+frame = 14
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 186)
+script = ExtResource("27_mnkyj")
+prefix_name = "Chief"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SortingDaddy/Chief2/Sprite2D"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_3chcu")
+}
+
+[node name="Interactable2" type="StaticBody2D" parent="."]
 position = Vector2(1253.16, -146.171)
 script = ExtResource("10_kva58")
 timeline = ExtResource("9_sjtuv")
@@ -2541,8 +2573,9 @@ offset = Vector2(0.5, 0.5)
 region_enabled = true
 region_rect = Rect2(294, 23, 9, 7)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Interactable2"]
-polygon = PackedVector2Array(-16.16, 4.17101, -14.16, 15.171, 0.839966, 13.171)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable2"]
+position = Vector2(-3.07996, 7.17101)
+shape = SubResource("RectangleShape2D_g4y68")
 
 [node name="EssentialProps20" type="Sprite2D" parent="."]
 z_index = -2
@@ -2560,7 +2593,7 @@ offset = Vector2(0.5, 0.5)
 region_enabled = true
 region_rect = Rect2(185, 62, 31, 19)
 
-[node name="Interactable" type="RigidBody2D" parent="."]
+[node name="Interactable" type="StaticBody2D" parent="."]
 position = Vector2(685, -91)
 script = ExtResource("10_kva58")
 timeline = ExtResource("10_gn8l5")

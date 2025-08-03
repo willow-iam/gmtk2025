@@ -9,7 +9,7 @@ func _ready() -> void:
 		elif name == "Exit" and get_parent() is Doorway:
 			destination = get_parent().global_position + Vector2(0,24)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if has_overlapping_bodies():
 		var that = get_overlapping_bodies()[0]
 		that.position = destination

@@ -24,7 +24,7 @@ if {time} > 240 and {inventory.handcuffs}:
 				else:
 					jump Close
 			else:
-				jump Close
+				jump End
 		- Present Painting | [if {inventory.painting} == true]
 			label qPainting
 			set {presented_count} += 1
@@ -41,7 +41,7 @@ if {time} > 240 and {inventory.handcuffs}:
 				else:
 					jump Close
 			else:
-				jump Close
+				jump End
 		- Present Invitation | [if {inventory.handcuffs} == true]
 			label qInvitation
 			set {presented_count} += 1
@@ -56,14 +56,23 @@ if {time} > 240 and {inventory.handcuffs}:
 					jump qPainting
 				else:
 					jump Close
-	label Close
-	Jiminy (Sus): The mayor was doing paperwork, and my Granny doesn't own any gun that could make that kind of wound.
-	Jiminy (Angry): You are the only person who could have done this.
-	Chief (SweatLeft): Big deal. Cops dealing with the mafia, cops killing people, cops have been doing those things since the beginning of time.
-	Chief (Angry): Just give me that slap on the wrist and let me get on with my life.
-	Jiminy (Look): Conductor, would you mind making a pit stop at the local courthouse?
+			else:
+				jump End
+if false:
+	label End
+	The mayor was doing paperwork, and my Grandfather doesn't own any gun that could make that kind of wound.
+	You are the only person who could have done this.
+	Big deal. Cops dealing with the mafia, cops killing people, cops have been doing those things since the beginning of time.
+	Just give me that slap on the wrist and let me get on with my life.
+	Captain, would you mind making a pit stop at the local courthouse?
 	Not at all!
-else:
-	Chief (Default): You're still looking? You're persistent, I'll give you that.
-	Chief (EyesClosed): And don't even think about going into the back while I'm gone.
-	Chief (Default): My office has a 15 second time lock from when I close the door. You're already too late.
+	(Everyone gets on the space train.)
+	Credits\:
+	Visual art, Writing, Story design\: Emily Uffelman
+	Programming, Edititng\: Will Howard
+	[signal arg="exit"]
+
+if false:
+	label Close
+	See? You can't Prove a thing.
+	[Scene omitted to comply with the GMTK Game Jam's content policy]

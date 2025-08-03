@@ -15,3 +15,5 @@ func handle_dialogic_signal(arg:String):
 	elif arg == "bg music":
 		get_node("AudioStreamPlayer").stream = load("res://audio/emily game.mp3")
 		get_node("AudioStreamPlayer").play()
+	elif arg == "exit":
+		get_tree().change_scene_to_file("res://MainMenu.tscn")

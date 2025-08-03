@@ -7,13 +7,13 @@
 "sound_mood_default": "",
 "sound_moods": {
 "Mood 1": {
-"mode": 0,
+"mode": 2,
 "name": "Mood 1",
 "pitch_base": 1.0,
 "pitch_variance": 0.0,
 "skip_characters": 0.0,
-"sound_path": "Chief.wav",
-"volume_base": 15.0,
+"sound_path": "res://characters/Portraits/ezgif-split/Chief.wav",
+"volume_base": 1.0,
 "volume_variance": 0.0
 }
 },

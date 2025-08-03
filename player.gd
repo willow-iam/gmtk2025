@@ -1,11 +1,10 @@
 extends CharacterBody2D
 
 @export var speed = 120
-var interact_range : ShapeCast2D
+var interact_range : Area2D
 
 func _ready():
-	interact_range = get_node("InteractRange") as ShapeCast2D
-	interact_range.add_exception(self)
+	interact_range = get_node("InteractRange") as Area2D
 	GameClock.restart()
 	Dialogic.start("Intro")
 
@@ -16,11 +15,9 @@ func get_input():
 
 
 func get_interactable() -> Interactable:
-	if interact_range.is_colliding():
-		for i in interact_range.get_collision_count():
-			var that = interact_range.get_collider(i)
-			if that is Interactable:
-				return that
+	for that in interact_range.get_overlapping_bodies():
+		if that is Interactable:
+			return that
 	return null
 
 func _physics_process(_delta):
