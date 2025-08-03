@@ -59,6 +59,7 @@ directories/dtl_directory={
 "PolicePlaque": "res://PolicePlaque.dtl",
 "Rug": "res://VNScenes/Rug.dtl",
 "UseCuffs": "res://VNScenes/UseCuffs.dtl",
+"WallOfGuns": "res://VNScenes/WallOfGuns.dtl",
 "Winventory": "res://Winventory.dtl",
 "WorldMap": "res://VNScenes/WorldMap.dtl"
 }

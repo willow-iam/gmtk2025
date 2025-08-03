@@ -2,5 +2,6 @@ if {inventory.key} == false:
 	There's a key in here!
 	I'll take it.
 	set {inventory.key} = true
+	[sound path="res://characters/Portraits/ezgif-split/Pickup.wav" volume="1.0"]
 else:
 	There was a key in here. Now it's just a bush.

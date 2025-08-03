@@ -3,4 +3,5 @@ Take it?
 - Yes
 	set {inventory.journal} = true
 	[signal arg="unlock"]
+	[sound path="res://characters/Portraits/ezgif-split/Pickup.wav" volume="0.0"]
 - No

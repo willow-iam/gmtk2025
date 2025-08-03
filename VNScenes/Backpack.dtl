@@ -1,3 +1,4 @@
+[music path="res://characters/Portraits/ezgif-split/OpenInventory.wav" fade="0.0" volume="0.0"]
 - Business Card | [if {inventory.bizcard}]
 	“Martian Mafia. Need someone dead? Something covered up? Just ask us in the dark corridor next to the Mayor’s office.” Why on earth would Jeremiah have something like this?
 - Jeremiah's Will | [if {inventory.will}]
@@ -9,18 +10,21 @@
 		*click*
 		The Journal unlocked!
 		It reads\: “I know what I have to do now. It’s time to break into the 👍👆🖐👉👈🕯💧 👎☀️✌️♐️👉☀️. I know I’m onto something, and that office drawer should contain all the rest of the evidence I need to bring them to justice.” I never liked how he covered up important details with a series of emojis.
+		CRUCIAL EVIDENCE\: 1/3
 	else:
 		Nope, that wasn't it.
 - Invitation | [if {inventory.handcuffs} == true]
 	It looks like an invitation. “Dear Jeremiah Jilikers, You have been invited by the Martian Mafia to a getaway on Rigel 7. Bottles will be spun, gossip will be shared, and fine art by yours truly will be auctioned.”
+	CRUTIAL EVIDENCE\: 1/3
 - Paint Tube | [if {inventory.paint}]
 	Ambitious Amber
 - Handcuffs | [if {inventory.handcuffs} == true]
-	if {journal_unlocked} and {inventory.painting}:
+	if {journal_unlocked} and {inventory.painting} and {inventory.invitation}:
 		I have enough evidence. Now I have to find the culprit before the shuttle leaves.
 	else:
 		I'll use these when I have enough evidence.
 - Painting | [if {inventory.painting} == true]
 	Signed “Vincent van Mafia.” It’s pretty mid.
+	CRUCIAL EVIDENCE\: 1/3
 - Key | [if {inventory.key} == true]
 	A key, presumably used by the police.

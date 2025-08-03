@@ -1,4 +1,7 @@
 - Inspect Body
 	Yup, that’s him alright. It seems like he was carrying his will and some kind of business card. I’ll keep them with me in case they’re important.
+	[sound volume="0.0"]
 	set {inventory.will} = true
 	set {inventory.bizcard} = true
+	I don't have nearly enough time to figure this all out.
+	I'll use the WATCH in my INVENTORY to turn back the clock to 11\:55, 5 minutes before the killer leaves.

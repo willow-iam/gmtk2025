@@ -1,5 +1,6 @@
 if {inventory.handcuffs} == true:
 	There was an invitation and a pair of handcuffs in here. They're mine now.
+	[sound path="res://characters/Portraits/ezgif-split/Pickup.wav" volume="0.0"]
 	return
 [text_input text="Locked with a 4 digit code." var="Answer"]
 if {Answer} == "9040":

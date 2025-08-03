@@ -3,4 +3,5 @@ Take one?
 - Yes
 	set {inventory.painting} = true
 	[signal arg="unlock"]
+	[sound path="res://characters/Portraits/ezgif-split/Pickup.wav" volume="0.0"]
 - No
