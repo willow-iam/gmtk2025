@@ -3,7 +3,6 @@ extends CharacterBody2D
 @export var speed = 120
 var interact_range : ShapeCast2D
 
-
 func _ready():
 	interact_range = get_node("InteractRange") as ShapeCast2D
 	interact_range.add_exception(self)
@@ -14,8 +13,9 @@ func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * speed
 
+
+
 func get_interactable() -> Interactable:
-	move_and_slide()
 	if interact_range.is_colliding():
 		for i in interact_range.get_collision_count():
 			var that = interact_range.get_collider(i)

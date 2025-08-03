@@ -1,3 +1,5 @@
+if {time} > 240.0:
+	jump MafiaStation/
 if {spoken.Mayor} == true:
 	"Vincent Van Mafia": Don't think I didn't hear you in there.
 	"Vincent Van Mafia": I don't know what you told him, but I keep my dealings with him very confidential.
@@ -15,7 +17,7 @@ else:
 		"Vincent Van Mafia": So Jeremiah finally bit it, eh?
 		"Vincent Van Mafia": Figured it'd happen sooner or later. Always-
 		Jiminy: What do you know about it?
-		"Vincent Van Mafia":  Jeez, have some patience why don't ya?
+		"Vincent Van Mafia": Jeez, have some patience why don't ya?
 		"Vincent Van Mafia": I may not know anything about it, but the police probably do.
 		Jiminy (Sigh): J\: They ruled it a suicide.
 		"Vincent Van Mafia": V\: Knowing them, they don't actually believe that.

@@ -1,4 +1,4 @@
-if {journal_unlocked} and {inventory.painting} and {inventory.handcuffs}:
+if {journal_unlocked} or {inventory.painting} or {inventory.handcuffs}:
 	Cuff him?
 	- Yes
 		Mayor: Oh no, the feds!

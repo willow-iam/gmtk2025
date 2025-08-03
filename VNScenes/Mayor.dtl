@@ -1,3 +1,5 @@
+if {time} > 240.0:
+	jump MayorStation/
 if {spoken.Mayor} == true:
 	Mayor: What, you think I'm gonna repeat our entire conversation? Get outta here.
 else:

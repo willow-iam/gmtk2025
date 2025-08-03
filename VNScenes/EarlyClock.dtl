@@ -1,4 +1,4 @@
-if {} < "240":
+if {time} < 240.0:
 	It tells the time. Not sure why it's here, everyone has a watch.
 else:
 	jump OpenClock/

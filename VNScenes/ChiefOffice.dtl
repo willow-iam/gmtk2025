@@ -1,1 +1,3 @@
+if {time} > 150.0:
+	jump ChiefStation/
 Chief (Default): I told you kid, I can't help you. Now get out before I arrest you for loitering.

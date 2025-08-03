@@ -1,3 +1,5 @@
+if {time} > 240.0:
+	jump GrannyStation/
 if {spoken.Granny} == true:
 	Granny (Default): I'd like to say it's been nice seeing you.
 	Granny (Default): ...

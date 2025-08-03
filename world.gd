@@ -9,4 +9,4 @@ func handle_dialogic_signal(arg:String):
 		Dialogic.VAR.reset()
 		get_tree().reload_current_scene()
 	elif arg =="unlock":
-		get_node("Player").unlock()
+		get_node("SortingDaddy/Jiminy").unlock()

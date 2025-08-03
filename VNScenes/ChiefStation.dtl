@@ -1,4 +1,10 @@
-if {journal_unlocked} and {inventory.painting} and {inventory.handcuffs}:
+if {time} > 240 and {inventory.handcuffs}:
+	Cuff him?
+	- Yes:
+		jump Cuff
+	- No
+		return
+	label Cuff
 	Chief (Yell): Hey, what's going on?
 	Jiminy (Angry): You're under arrest for the murder of my brother.
 	Chief (Angry): That's ridiculous, I'm a cop! What evidence do you even have?
@@ -57,7 +63,7 @@ if {journal_unlocked} and {inventory.painting} and {inventory.handcuffs}:
 	Chief (Angry): Just give me that slap on the wrist and let me get on with my life.
 	Jiminy (Look): Conductor, would you mind making a pit stop at the local courthouse?
 	Not at all!
-	else:
-		Chief (Default): You're still looking? You're persistent, I'll give you that.
-		Chief (EyesClosed): And don't even think about going into the back while I'm gone.
-		Chief (Default): My office has a 15 second time lock from when I close the door. You're already too late.
+else:
+	Chief (Default): You're still looking? You're persistent, I'll give you that.
+	Chief (EyesClosed): And don't even think about going into the back while I'm gone.
+	Chief (Default): My office has a 15 second time lock from when I close the door. You're already too late.

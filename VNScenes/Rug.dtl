@@ -1,2 +1,3 @@
 I checked under the rug. The code "162" is on the underside.
 set {rug_check} = true
+[signal arg="unlock"]
