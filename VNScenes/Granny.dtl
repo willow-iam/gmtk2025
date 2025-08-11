@@ -4,10 +4,10 @@ if {spoken.Granny} == true:
 	Granny (Default): I'd like to say it's been nice seeing you.
 	Granny (Default): ...
 else:
-	Granny (Default): Jimpin, my beautiful grandchild!
+	Granny (Default): Jiminy, my beautiful grandchild!
 	Granny (Happy): Come to hear more stories about my various murders?
 	- Lay it on me murder granny
-		Granny (Discontent): O\: Well too bad! My guns need-a polishin'.
+		Granny (Discontent): Well too bad! My guns need-a polishin'.
 	- What's with the numbers under the rug? | [if {spoken.Rug} == true]
 		Granny (Happy): Oh yes, Jeremiah put it there!
 		Granny (Default): For some reason he trusted me with it. Never told me what it was for, though.
@@ -29,7 +29,7 @@ else:
 			Jiminy (Sus): He did die first.
 			Granny (Look): Well that certainly does complicate matters, doesn't it...
 			Granny (Discontent): Some grandson. Let him keep his filthy rounded money.
-			Jiminy (Sus): J\: He's dead, granny.
+			Jiminy (Sus): He's dead, granny.
 			Granny (Discontent): And we're all the better for it.
 			Granny (Look): If you wanna get to the bottom of the murder, though, I'd investigate the mayor.
 			Granny (Angry): I never liked him, anyway. Four less years!

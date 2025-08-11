@@ -10,7 +10,7 @@ else:
 	"Vincent Van Mafia": What do you want, kid? You're blocking my view
 	
 	- Want some paint? | [if {inventory.paint}]
-		"Vincent Van Mafia": V\: Wait, what? Let's see here...
+		"Vincent Van Mafia": Wait, what? Let's see here...
 		"Vincent Van Mafia": Ambitious Amber. Beautiful color. You're in luck, I just ran out of what I had.
 		"Vincent Van Mafia": Well, you know the deal. What do you wanna know?
 		Jiminy (Default): My brother's dead.
@@ -19,16 +19,16 @@ else:
 		Jiminy: What do you know about it?
 		"Vincent Van Mafia": Jeez, have some patience why don't ya?
 		"Vincent Van Mafia": I may not know anything about it, but the police probably do.
-		Jiminy (Sigh): J\: They ruled it a suicide.
-		"Vincent Van Mafia": V\: Knowing them, they don't actually believe that.
+		Jiminy (Sigh): They ruled it a suicide.
+		"Vincent Van Mafia": Knowing them, they don't actually believe that.
 		"Vincent Van Mafia": We've got a word for people like them back on Mars.
 		"Vincent Van Mafia": ...
 		"Vincent Van Mafia": Anyway, if you wanna see what they've got, they leave the key to their back office in the bushes they got outside their door.
 		"Vincent Van Mafia": Well, thanks for the paint, kid. Be seein' ya.
 	- Sorry to bother you
-		"Vincent Van Mafia": V\: You should be. Now leave me alone, your presence is sapping my talent.
+		"Vincent Van Mafia": You should be. Now leave me alone, your presence is sapping my talent.
 	- Did you kill my brother?
-		"Vincent Van Mafia": V\: So Jeremiah finally bit it, eh?
+		"Vincent Van Mafia": So Jeremiah finally bit it, eh?
 		"Vincent Van Mafia": Figured it'd happen sooner or later. Always stickin' his nose where it didn't belong.
 		"Vincent Van Mafia": But no, I didn't kill him. I assume it happened last night, yeah?
 		"Vincent Van Mafia": We got back this morning from a week long trip to Rigel 7.
